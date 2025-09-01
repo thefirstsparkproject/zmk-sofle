@@ -84,6 +84,43 @@
         };
     };
 
+    macros {
+        grave_accent_macro: accent_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp GRAVE>;
+            label = "ACCENT_MACRO";
+        };
+
+        acute_accent_macro: acute_accent_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp APOSTROPHE>;
+            label = "ACUTE_ACCENT_MACRO";
+        };
+
+        circumflex_accent_macro: circumflex_accent_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp CARET>;
+            label = "CIRCUMFLEX_ACCENT_MACRO";
+        };
+
+        diaeresis_accent_macro: diaeresis_accent_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp DOUBLE_QUOTES>;
+            label = "DIAERESIS_ACCENT_MACRO";
+        };
+
+        c_cedilla_macro: cedilla_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp COMMA &kp C>;
+            label = "CEDILLA_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
