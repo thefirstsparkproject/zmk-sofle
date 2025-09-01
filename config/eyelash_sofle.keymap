@@ -124,20 +124,20 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer0 {
+        base_layer {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
-&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp ENTER   &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp SPACE  &kp BACKSPACE    &kp FSLH    &kp ENTER
+&none       &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &none
+&none       &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &none
+&none       &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp ENTER   &none
+&none       &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp SPACE  &kp BACKSPACE    &kp FSLH    &gresc
 &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "layer 1";
+            display-name = "base_layer";
         };
 
-        layer1 {
+        symbol_layer {
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
@@ -147,7 +147,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "layer 2";
+            display-name = "symbol_layer";
         };
 
         layer2 {
@@ -215,6 +215,19 @@
             display-name = "layer 7";
         };
 
+        layer10 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA  &trans      &trans        &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans        &trans         &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6     &kp N7      &kp N8        &kp N9         &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA  &kp PERIOD  &comma_dance  &period_dance  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans        &trans         &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "layer 11";
+        };
+
         layer7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -252,19 +265,6 @@
 
             sensor-bindings = <&scroll_encoder>;
             display-name = "layer 10";
-        };
-
-        layer10 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA  &trans      &trans        &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans        &trans         &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6     &kp N7      &kp N8        &kp N9         &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA  &kp PERIOD  &comma_dance  &period_dance  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans        &trans         &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-            display-name = "layer 11";
         };
 
         layer11 {
