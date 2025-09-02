@@ -103,14 +103,14 @@
         compatible = "zmk,behavior-tap-dance";
         label = "MOUSE_MODE";
         #binding-cells = <0>;
-        bindings = <&kp M>, <&to 3>;
+        bindings = <&kp M>, <&to 0>;
     };
 
     keyboard_mode: keyboard_mode {
         compatible = "zmk,behavior-tap-dance";
         label = "KEYBOARD_MODE";
         #binding-cells = <0>;
-        bindings = <&kp V>, <&to 4>;
+        bindings = <&kp V>, <&to 0>;
     };
 
     home_row_mod: home_row_mod {
@@ -149,7 +149,7 @@
         compose_accent: compose_accent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt CAPS &sl 6>;
+            bindings = <&kt CAPS &sl 0>;
             label = "COMPOSE_ACCENT";
         };
 
@@ -225,24 +225,11 @@
 &trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                    &trans
 &kp HOME    &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN RWIN  &kp END
 &trans      &kp Z                     &kp X                     &kp C                  &keyboard_mode          &kp B        &mmv MOVE_RIGHT  &kp N          &mouse_mode            &kp UNDERSCORE         &kp BACKSPACE         &kp TAB                  &trans
-&kp C_MUTE  &to 2                     &trans                    &mo 5                  &mo 1                   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER              &kp TAB                &compose_accent       &to 2
+&kp C_MUTE  &to 1                     &trans                    &sl 2                  &none                   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER              &kp TAB                &compose_accent       &to 1
             >;
 
             sensor-bindings = <&encoder_page>;
             display-name = "base_layer";
-        };
-
-        symbols {
-            bindings = <
-&trans     &trans                       &trans                       &trans                  &trans                  &trans          &trans  &trans      &trans                   &trans                  &trans                 &trans                 &trans
-&trans     &kp TILDE                    &kp AT                       &kp HASH                &kp AMPERSAND           &group_begin    &trans  &group_end  &kp PIPE                 &kp BSLH                &period_plus           &trans                 &trans
-&kp CARET  &home_row_mod LWIN NUMBER_1  &home_row_mod LALT NUMBER_2  &home_row_mod LCTRL N3  &home_row_mod LSHFT N4  &kp N5          &trans  &kp N6      &home_row_mod RSHIFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RWIN N0  &kp LS(DOLLAR)
-&trans     &kp LESS_THAN                &division                    &kp STAR                &kp MINUS               &kp PLUS        &trans  &kp EQUAL   &quote                   &comma                  &period                &kp GREATER_THAN       &trans
-&trans     &trans                       &trans                       &trans                  &trans                  &trans          &trans  &trans      &trans                   &trans                  &trans                 &trans
-            >;
-
-            sensor-bindings = <&encoder_page>;
-            display-name = "symbols";
         };
 
         hardware {
@@ -258,49 +245,23 @@
             display-name = "hardware";
         };
 
-        mouse {
+        layer_2 {
             bindings = <
-&none   &none  &none           &none           &none            &none     &trans  &none    &none      &none      &none      &none  &none
-&none   &none  &none           &mmv MOVE_UP    &none            &none     &trans  &none    &ml_ctrl   &nav_zoom  &none      &none  &none
-&none   &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none     &trans  &ml_alt  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none  &none
-&none   &none  &none           &none           &none            &none     &trans  &none    &ml_shift  &nav_pan   &none      &none  &none
-&trans  &none  &none           &none           &none            &trans    &trans  &none    &none      &none      &none      &none
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-            display-name = "mouse";
-        };
-
-        keyboard {
-            bindings = <
-&none     &none   &none   &none   &none   &none     &none  &none           &none     &none       &none      &none            &none
-&none     &none   &none   &none   &none   &none     &none  &none           &none     &kp INSERT  &none      &kp PRINTSCREEN  &none
-&kp HOME  &trans  &trans  &trans  &trans  &none     &none  &kp LEFT_ARROW  &kp DOWN  &kp UP      &kp RIGHT  &none            &kp END
-&none     &none   &none   &none   &none   &none     &none  &none           &none     &none       &none      &none            &none
-&none     &none   &none   &none   &none   &trans    &none  &none           &none     &none       &none      &none
-            >;
-
-            sensor-bindings = <&encoder_page>;
-            display-name = "keyboard";
-        };
-
-        fn {
-            bindings = <
-&none  &none   &none   &none   &none   &none    &none  &none  &none   &none    &none    &none    &none
-&none  &none   &none   &none   &none   &none    &none  &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
-&none  &trans  &trans  &trans  &trans  &none    &none  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none  &none   &none   &none   &none   &none    &none  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &none   &none   &none   &none   &none    &none  &none  &none   &none    &none    &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &sl 3   &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        accent {
+        layer_3 {
             bindings = <
-&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none  &none
-&none  &kp LS(DQT)  &kp LS(CARET)  &kp GRAVE  &kp APOS  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp PRCNT  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans
             >;
         };
     };
