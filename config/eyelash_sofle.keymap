@@ -85,15 +85,6 @@
         bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
     };
 
-    tap_hold: tap_hold {
-        compatible = "zmk,behavior-hold-tap";
-        label = "TAP_HOLD";
-        bindings = <&kp>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-    };
-
     encoder_page: encoder_page {
         compatible = "zmk,behavior-sensor-rotate";
         label = "ENCODER_PAGE";
@@ -122,55 +113,14 @@
         bindings = <&kp V>, <&to 4>;
     };
 
-    hardware_mode: hardware_mode {
-        compatible = "zmk,behavior-tap-dance";
-        label = "HARDWARE_MODE";
-        #binding-cells = <0>;
-        bindings = <&kp H>, <&to 2>;
-    };
-
-    q_escape: q_escape {
-        compatible = "zmk,behavior-tap-dance";
-        label = "Q_ESCAPE";
-        #binding-cells = <0>;
-        bindings = <&kp Q>, <&kp ESCAPE>;
-    };
-
-    e_enter: e_enter {
-        compatible = "zmk,behavior-tap-dance";
-        label = "E_ENTER";
-        #binding-cells = <0>;
-        bindings = <&kp E>, <&kp ENTER>;
-    };
-
-    home_row_mod_balanced: home_row_mod_balanced {
+    home_row_mod: home_row_mod {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MOD_BALANCED";
+        label = "HOME_ROW_MOD";
         bindings = <&kp>, <&kp>;
 
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         flavor = "balanced";
-    };
-
-    home_row_mod_tap: home_row_mod_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MOD_TAP";
-        bindings = <&kp>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        flavor = "tap-preferred";
-    };
-
-    home_row_mod_interrupted: home_row_mod_interrupted {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MOD_INTERRUPTED";
-        bindings = <&kp>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        flavor = "tap-preferred";
     };
 
     behaviors {
@@ -271,11 +221,11 @@
 
         base_layer {
             bindings = <
-&to 7       &to 8                 &to 9                 &kp ESCAPE         &kp N4              &kp N5       &mmv MOVE_UP     &kp N6         &kp N7             &to 0              &kp N9            &kp N0               &trans
-&trans      &kp Q                 &kp W                 &kp E              &kp R               &kp T        &mmv MOVE_DOWN   &kp Y          &kp U              &kp I              &kp O             &kp P                &trans
-&kp HOME    &tap_hold LEFT_WIN A  &tap_hold LEFT_ALT S  &tap_hold LCTRL D  &tap_hold LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &tap_hold RSHFT J  &tap_hold RCTRL K  &tap_hold RALT L  &tap_hold RWIN RWIN  &kp END
-&trans      &kp Z                 &kp X                 &kp C              &keyboard_mode      &kp B        &mmv MOVE_RIGHT  &kp N          &mouse_mode        &kp UNDERSCORE     &kp BACKSPACE     &kp TAB              &trans
-&kp C_MUTE  &to 2                 &trans                &mo 5              &mo 1               &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER          &kp TAB            &compose_accent   &to 2
+&trans      &kp N1                    &kp N2                    &kp ESCAPE             &kp N4                  &kp N5       &mmv MOVE_UP     &kp N6         &kp N7                 &to 0                  &kp N9                &kp N0                   &trans
+&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                    &trans
+&kp HOME    &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN RWIN  &kp END
+&trans      &kp Z                     &kp X                     &kp C                  &keyboard_mode          &kp B        &mmv MOVE_RIGHT  &kp N          &mouse_mode            &kp UNDERSCORE         &kp BACKSPACE         &kp TAB                  &trans
+&kp C_MUTE  &to 2                     &trans                    &mo 5                  &mo 1                   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER              &kp TAB                &compose_accent       &to 2
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -284,11 +234,11 @@
 
         symbols {
             bindings = <
-&trans     &trans                   &trans                   &trans              &trans              &trans          &trans  &trans      &trans               &trans              &trans             &trans             &trans
-&trans     &kp TILDE                &kp AT                   &kp HASH            &kp AMPERSAND       &group_begin    &trans  &group_end  &kp PIPE             &kp BSLH            &period_plus       &trans             &trans
-&kp CARET  &tap_hold LWIN NUMBER_1  &tap_hold LALT NUMBER_2  &tap_hold LCTRL N3  &tap_hold LSHFT N4  &kp N5          &trans  &kp N6      &tap_hold RSHIFT N7  &tap_hold RCTRL N8  &tap_hold RALT N9  &tap_hold RWIN N0  &kp LS(DOLLAR)
-&trans     &kp LESS_THAN            &division                &kp STAR            &kp MINUS           &kp PLUS        &trans  &kp EQUAL   &quote               &comma              &period            &kp GREATER_THAN   &trans
-&trans     &trans                   &trans                   &trans              &trans              &trans          &trans  &trans      &trans               &trans              &trans             &trans
+&trans     &trans                       &trans                       &trans                  &trans                  &trans          &trans  &trans      &trans                   &trans                  &trans                 &trans                 &trans
+&trans     &kp TILDE                    &kp AT                       &kp HASH                &kp AMPERSAND           &group_begin    &trans  &group_end  &kp PIPE                 &kp BSLH                &period_plus           &trans                 &trans
+&kp CARET  &home_row_mod LWIN NUMBER_1  &home_row_mod LALT NUMBER_2  &home_row_mod LCTRL N3  &home_row_mod LSHFT N4  &kp N5          &trans  &kp N6      &home_row_mod RSHIFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RWIN N0  &kp LS(DOLLAR)
+&trans     &kp LESS_THAN                &division                    &kp STAR                &kp MINUS               &kp PLUS        &trans  &kp EQUAL   &quote                   &comma                  &period                &kp GREATER_THAN       &trans
+&trans     &trans                       &trans                       &trans                  &trans                  &trans          &trans  &trans      &trans                   &trans                  &trans                 &trans
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -352,45 +302,6 @@
 &none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none
             >;
-        };
-
-        balanced {
-            display-name = "balanced";
-            bindings = <
-&trans      &kp N1                             &kp N2                             &kp ESCAPE                      &kp N4                           &kp N5       &mmv MOVE_UP     &kp N6         &kp N7                          &to 0                           &kp N9                         &kp N0                            &trans
-&trans      &kp Q                              &kp W                              &kp E                           &kp R                            &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                           &kp I                           &kp O                          &kp P                             &trans
-&kp HOME    &home_row_mod_balanced LEFT_WIN A  &home_row_mod_balanced LEFT_ALT S  &home_row_mod_balanced LCTRL D  &home_row_mod_balanced LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod_balanced RSHFT J  &home_row_mod_balanced RCTRL K  &home_row_mod_balanced RALT L  &home_row_mod_balanced RWIN RWIN  &kp END
-&trans      &kp Z                              &kp X                              &kp C                           &keyboard_mode                   &kp B        &mmv MOVE_RIGHT  &kp N          &mouse_mode                     &kp UNDERSCORE                  &kp BACKSPACE                  &kp TAB                           &trans
-&kp C_MUTE  &to 2                              &trans                             &mo 5                           &mo 1                            &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER                       &kp TAB                         &compose_accent                &to 2
-            >;
-
-            sensor-bindings = <&encoder_page>;
-        };
-
-        tap {
-            display-name = "tap";
-            bindings = <
-&trans      &kp N1                        &kp N2                        &kp ESCAPE                 &kp N4                      &kp N5       &mmv MOVE_UP     &kp N6         &kp N7                     &to 0                      &kp N9                    &kp N0                       &trans
-&trans      &kp Q                         &kp W                         &kp E                      &kp R                       &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                      &kp I                      &kp O                     &kp P                        &trans
-&kp HOME    &home_row_mod_tap LEFT_WIN A  &home_row_mod_tap LEFT_ALT S  &home_row_mod_tap LCTRL D  &home_row_mod_tap LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod_tap RSHFT J  &home_row_mod_tap RCTRL K  &home_row_mod_tap RALT L  &home_row_mod_tap RWIN RWIN  &kp END
-&trans      &kp Z                         &kp X                         &kp C                      &keyboard_mode              &kp B        &mmv MOVE_RIGHT  &kp N          &mouse_mode                &kp UNDERSCORE             &kp BACKSPACE             &kp TAB                      &trans
-&kp C_MUTE  &to 2                         &trans                        &mo 5                      &mo 1                       &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER                  &kp TAB                    &compose_accent           &to 2
-            >;
-
-            sensor-bindings = <&encoder_page>;
-        };
-
-        interrupt {
-            display-name = "interrupt";
-            bindings = <
-&trans      &kp N1                                &kp N2                                &kp ESCAPE                         &kp N4                              &kp N5       &mmv MOVE_UP     &kp N6         &kp N7                             &to 0                              &kp N9                            &kp N0                               &trans
-&trans      &kp Q                                 &kp W                                 &kp E                              &kp R                               &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                              &kp I                              &kp O                             &kp P                                &trans
-&kp HOME    &home_row_mod_interrupted LEFT_WIN A  &home_row_mod_interrupted LEFT_ALT S  &home_row_mod_interrupted LCTRL D  &home_row_mod_interrupted LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod_interrupted RSHFT J  &home_row_mod_interrupted RCTRL K  &home_row_mod_interrupted RALT L  &home_row_mod_interrupted RWIN RWIN  &kp END
-&trans      &kp Z                                 &kp X                                 &kp C                              &keyboard_mode                      &kp B        &mmv MOVE_RIGHT  &kp N          &mouse_mode                        &kp UNDERSCORE                     &kp BACKSPACE                     &kp TAB                              &trans
-&kp C_MUTE  &to 2                                 &trans                                &mo 5                              &mo 1                               &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER                          &kp TAB                            &compose_accent                   &to 2
-            >;
-
-            sensor-bindings = <&encoder_page>;
         };
     };
 };
