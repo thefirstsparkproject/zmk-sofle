@@ -158,6 +158,68 @@
             bindings = <&kt CAPS &sl 6>;
             label = "COMPOSE_ACCENT";
         };
+
+        nav_pan: lclk_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &mkp MCLK>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mkp MCLK &kp LSHFT>;
+
+            label = "LCLK_CTRL";
+        };
+
+        nav_zoom: nav_zoom {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &mkp MCLK>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mkp MCLK &kp LCTRL>;
+
+            label = "NAV_ZOOM";
+        };
+
+        ml_shift: ml_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &mkp LCLK>,
+                <&macro_release>,
+                <&mkp LCLK &kp LSHFT>;
+
+            label = "ML_SHIFT";
+        };
+
+        ml_ctrl: ml_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &mkp LCLK>,
+                <&macro_release>,
+                <&mkp LCLK &kp LCTRL>;
+
+            label = "ML_CTRL";
+        };
+
+        ml_alt: ml_alt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT &mkp LCLK>,
+                <&macro_release>,
+                <&mkp LCLK &kp LCTRL>;
+
+            label = "ML_ALT";
+        };
     };
 
     keymap {
@@ -165,11 +227,11 @@
 
         base_layer {
             bindings = <
-&none       &kp N1                &kp N2                &kp N3             &kp N4             &kp N5    &mmv MOVE_UP     &kp N6          &kp N7              &kp N8             &kp N9                 &kp N0                &none
-&none       &kp Q                 &kp W                 &kp E              &kp R              &kp T     &mmv MOVE_DOWN   &kp Y           &kp U               &kp I              &kp O                  &kp P                 &none
-&kp HOME    &tap_hold A LEFT_WIN  &tap_hold S LEFT_ALT  &tap_hold D LSHFT  &tap_hold F LSHFT  &kp G     &mmv MOVE_LEFT   &hardware_mode  &tap_hold J RSHIFT  &tap_hold RCTRL K  &tap_hold L RIGHT_ALT  &tap_hold UNDER LWIN  &kp END
-&none       &kp Z                 &kp X                 &kp C              &keyboard_mode     &kp B     &mmv MOVE_RIGHT  &kp N           &mouse_mode         &kp SPACE          &kp BACKSPACE          &kp TAB               &none
-&kp C_MUTE  &trans                &trans                &mo 5              &mo 1              &to 0     &mkp LCLK        &trans          &trans              &compose_accent    &trans                 &trans
+&none       &kp N1                &kp N2                &kp N3             &kp N4              &kp N5    &mmv MOVE_UP     &kp N6          &kp N7             &kp N8             &kp N9            &kp N0                     &none
+&none       &kp Q                 &kp W                 &kp E              &kp R               &kp T     &mmv MOVE_DOWN   &kp Y           &kp U              &kp I              &kp O             &kp P                      &none
+&kp HOME    &tap_hold LEFT_WIN A  &tap_hold LEFT_ALT S  &tap_hold LCTRL D  &tap_hold LSHIFT F  &kp G     &mmv MOVE_LEFT   &hardware_mode  &tap_hold RSHFT J  &tap_hold RCTRL K  &tap_hold RALT L  &tap_hold RWIN UNDERSCORE  &kp END
+&none       &kp Z                 &kp X                 &kp C              &keyboard_mode      &kp B     &mmv MOVE_RIGHT  &kp N           &mouse_mode        &kp SPACE          &kp BACKSPACE     &kp TAB                    &none
+&kp C_MUTE  &trans                &trans                &mo 5              &mo 1               &to 0     &mkp LCLK        &trans          &trans             &compose_accent    &trans            &trans
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -178,11 +240,11 @@
 
         symbols {
             bindings = <
-&trans     &trans                 &trans                 &trans              &trans                   &trans          &trans  &trans      &trans              &trans              &trans                  &trans             &trans
-&trans     &kp TILDE              &kp AT                 &kp HASH            &kp AMPERSAND            &group_begin    &trans  &group_end  &kp PIPE            &kp BSLH            &period_plus            &trans             &trans
-&kp CARET  &tap_hold N1 LEFT_WIN  &tap_hold N2 LEFT_ALT  &tap_hold N3 LCTRL  &tap_hold N4 LEFT_SHIFT  &kp N5          &trans  &kp N6      &tap_hold N7 RSHFT  &tap_hold N8 RCTRL  &tap_hold N9 RIGHT_ALT  &tap_hold N0 RWIN  &kp LS(DOLLAR)
-&trans     &kp LESS_THAN          &division              &kp STAR            &kp MINUS                &kp PLUS        &trans  &kp EQUAL   &quote              &comma              &period                 &kp GREATER_THAN   &trans
-&trans     &trans                 &trans                 &trans              &trans                   &trans          &trans  &trans      &trans              &trans              &trans                  &trans
+&trans     &trans                   &trans                   &trans              &trans              &trans          &trans  &trans      &trans               &trans              &trans             &trans             &trans
+&trans     &kp TILDE                &kp AT                   &kp HASH            &kp AMPERSAND       &group_begin    &trans  &group_end  &kp PIPE             &kp BSLH            &period_plus       &trans             &trans
+&kp CARET  &tap_hold LWIN NUMBER_1  &tap_hold LALT NUMBER_2  &tap_hold LCTRL N3  &tap_hold LSHFT N4  &kp N5          &trans  &kp N6      &tap_hold RSHIFT N7  &tap_hold RCTRL N8  &tap_hold RALT N9  &tap_hold RWIN N0  &kp LS(DOLLAR)
+&trans     &kp LESS_THAN            &division                &kp STAR            &kp MINUS           &kp PLUS        &trans  &kp EQUAL   &quote               &comma              &period            &kp GREATER_THAN   &trans
+&trans     &trans                   &trans                   &trans              &trans              &trans          &trans  &trans      &trans               &trans              &trans             &trans
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -204,14 +266,14 @@
 
         mouse {
             bindings = <
-&none  &none     &none     &none      &none      &none     &trans  &none           &none           &none         &none            &none  &none
-&none  &none     &none     &none      &none      &none     &trans  &none           &none           &none         &none            &none  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
-&none  &none     &none     &none      &none      &none     &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
-&none  &none     &none     &none      &none      &trans    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK     &none            &none
+&none   &none  &none           &none           &none            &none     &trans  &none    &none      &none      &none      &none  &none
+&none   &none  &none           &mmv MOVE_UP    &none            &none     &trans  &none    &ml_ctrl   &nav_zoom  &none      &none  &none
+&none   &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none     &trans  &ml_alt  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none  &none
+&none   &none  &none           &none           &none            &none     &trans  &none    &ml_shift  &nav_pan   &none      &none  &none
+&trans  &none  &none           &none           &none            &trans    &trans  &none    &none      &none      &none      &none
             >;
 
-            sensor-bindings = <&encoder_page>;
+            sensor-bindings = <&scroll_encoder>;
             display-name = "mouse";
         };
 
