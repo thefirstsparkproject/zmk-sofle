@@ -129,6 +129,20 @@
         bindings = <&kp H>, <&to 2>;
     };
 
+    q_escape: q_escape {
+        compatible = "zmk,behavior-tap-dance";
+        label = "Q_ESCAPE";
+        #binding-cells = <0>;
+        bindings = <&kp Q>, <&kp ESCAPE>;
+    };
+
+    e_enter: e_enter {
+        compatible = "zmk,behavior-tap-dance";
+        label = "E_ENTER";
+        #binding-cells = <0>;
+        bindings = <&kp E>, <&kp ENTER>;
+    };
+
     behaviors {
     };
 
@@ -228,7 +242,7 @@
         base_layer {
             bindings = <
 &none       &kp N1                &kp N2                &kp N3             &kp N4              &kp N5    &mmv MOVE_UP     &kp N6          &kp N7             &kp N8             &kp N9            &kp N0                     &none
-&none       &kp Q                 &kp W                 &kp E              &kp R               &kp T     &mmv MOVE_DOWN   &kp Y           &kp U              &kp I              &kp O             &kp P                      &none
+&trans      &q_escape             &kp W                 &e_enter           &kp R               &kp T     &mmv MOVE_DOWN   &kp Y           &kp U              &kp I              &kp O             &kp P                      &none
 &kp HOME    &tap_hold LEFT_WIN A  &tap_hold LEFT_ALT S  &tap_hold LCTRL D  &tap_hold LSHIFT F  &kp G     &mmv MOVE_LEFT   &hardware_mode  &tap_hold RSHFT J  &tap_hold RCTRL K  &tap_hold RALT L  &tap_hold RWIN UNDERSCORE  &kp END
 &none       &kp Z                 &kp X                 &kp C              &keyboard_mode      &kp B     &mmv MOVE_RIGHT  &kp N           &mouse_mode        &kp SPACE          &kp BACKSPACE     &kp TAB                    &none
 &kp C_MUTE  &trans                &trans                &mo 5              &mo 1               &to 0     &mkp LCLK        &trans          &trans             &compose_accent    &trans            &trans
