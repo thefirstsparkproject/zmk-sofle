@@ -152,39 +152,11 @@
     };
 
     macros {
-        grave_accent_macro: accent_macro {
+        compose_accent: compose_accent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT &kp GRAVE>;
-            label = "ACCENT_MACRO";
-        };
-
-        acute_accent_macro: acute_accent_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RALT &kp APOSTROPHE>;
-            label = "ACUTE_ACCENT_MACRO";
-        };
-
-        circumflex_accent_macro: circumflex_accent_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RALT &kp CARET>;
-            label = "CIRCUMFLEX_ACCENT_MACRO";
-        };
-
-        diaeresis_accent_macro: diaeresis_accent_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RALT &kp DOUBLE_QUOTES>;
-            label = "DIAERESIS_ACCENT_MACRO";
-        };
-
-        c_cedilla_macro: cedilla_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RALT &kp COMMA &kp C>;
-            label = "CEDILLA_MACRO";
+            bindings = <&kt CAPS &sl 6>;
+            label = "COMPOSE_ACCENT";
         };
     };
 
@@ -197,7 +169,7 @@
 &none       &kp Q                 &kp W                 &kp E              &kp R              &kp T     &mmv MOVE_DOWN   &kp Y           &kp U               &kp I              &kp O                  &kp P                 &none
 &kp HOME    &tap_hold A LEFT_WIN  &tap_hold S LEFT_ALT  &tap_hold D LSHFT  &tap_hold F LSHFT  &kp G     &mmv MOVE_LEFT   &hardware_mode  &tap_hold J RSHIFT  &tap_hold RCTRL K  &tap_hold L RIGHT_ALT  &tap_hold UNDER LWIN  &kp END
 &none       &kp Z                 &kp X                 &kp C              &keyboard_mode     &kp B     &mmv MOVE_RIGHT  &kp N           &mouse_mode         &kp SPACE          &kp BACKSPACE          &kp TAB               &none
-&kp C_MUTE  &trans                &trans                &mo 5              &mo 1              &trans    &mkp LCLK        &trans          &trans              &trans             &trans                 &trans
+&kp C_MUTE  &trans                &trans                &mo 5              &mo 1              &to 0     &mkp LCLK        &trans          &trans              &compose_accent    &trans                 &trans
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -223,7 +195,7 @@
 &none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none      &none
 &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none  &none       &none      &none
 &none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none      &none
-&none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none
+&none        &none         &none         &none         &none         &trans            &none  &none  &none            &none  &none       &none
             >;
 
             sensor-bindings = <&bt_nav>;
@@ -232,11 +204,11 @@
 
         mouse {
             bindings = <
-&none  &none     &none     &none      &none      &none    &trans  &none           &none           &none         &none            &none  &none
-&none  &none     &none     &none      &none      &none    &trans  &none           &none           &none         &none            &none  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
-&none  &none     &none     &none      &none      &none    &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
-&none  &none     &none     &none      &none      &none    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK     &none            &none
+&none  &none     &none     &none      &none      &none     &trans  &none           &none           &none         &none            &none  &none
+&none  &none     &none     &none      &none      &none     &trans  &none           &none           &none         &none            &none  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
+&none  &none     &none     &none      &none      &none     &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
+&none  &none     &none     &none      &none      &trans    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK     &none            &none
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -245,11 +217,11 @@
 
         keyboard {
             bindings = <
-&none     &none   &none   &none   &none   &none    &none  &none           &none     &none       &none      &none            &none
-&none     &none   &none   &none   &none   &none    &none  &none           &none     &kp INSERT  &none      &kp PRINTSCREEN  &none
-&kp HOME  &trans  &trans  &trans  &trans  &none    &none  &kp LEFT_ARROW  &kp DOWN  &kp UP      &kp RIGHT  &none            &kp END
-&none     &none   &none   &none   &none   &none    &none  &none           &none     &none       &none      &none            &none
-&none     &none   &none   &none   &none   &none    &none  &none           &none     &none       &none      &none
+&none     &none   &none   &none   &none   &none     &none  &none           &none     &none       &none      &none            &none
+&none     &none   &none   &none   &none   &none     &none  &none           &none     &kp INSERT  &none      &kp PRINTSCREEN  &none
+&kp HOME  &trans  &trans  &trans  &trans  &none     &none  &kp LEFT_ARROW  &kp DOWN  &kp UP      &kp RIGHT  &none            &kp END
+&none     &none   &none   &none   &none   &none     &none  &none           &none     &none       &none      &none            &none
+&none     &none   &none   &none   &none   &trans    &none  &none           &none     &none       &none      &none
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -263,6 +235,16 @@
 &none  &trans  &trans  &trans  &trans  &none    &none  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none  &none   &none   &none   &none   &none    &none  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
 &none  &none   &none   &none   &none   &none    &none  &none  &none   &none    &none    &none
+            >;
+        };
+
+        accent {
+            bindings = <
+&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none  &none
+&none  &kp LS(DQT)  &kp LS(CARET)  &kp GRAVE  &kp APOS  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none        &none          &none      &none     &none    &none  &none  &none  &none  &none  &none
             >;
         };
     };
