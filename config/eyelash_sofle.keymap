@@ -107,6 +107,13 @@
         bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
     };
 
+    underscore: underscore {
+        compatible = "zmk,behavior-tap-dance";
+        label = "UNDERSCORE";
+        #binding-cells = <0>;
+        bindings = <&kp U>, <&kp UNDERSCORE>;
+    };
+
     behaviors {
     };
 
@@ -116,6 +123,16 @@
         softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <22 23>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <15 14>;
         };
     };
 
@@ -163,8 +180,8 @@
             bindings = <
 &none       &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &none
 &none       &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &none
-&none       &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp ENTER   &none
-&none       &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp SPACE  &kp BACKSPACE    &kp FSLH    &gresc
+&none       &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp UNDER   &none
+&none       &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp SPACE  &kp BACKSPACE    &kp TAB     &none
 &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
             >;
 
@@ -200,28 +217,28 @@
 
         layer3 {
             bindings = <
-&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans            &trans    &trans    &trans        &trans        &trans
-&trans     &kp TILDE      &kp AT     &kp HASH  &kp AMPERSAND  &group_begin    &trans  &group_end        &kp PIPE  &kp BSLH  &period_plus  &trans        &trans
-&kp CARET  &kp N1         &kp N2     &kp N3    &kp N4         &kp N5          &trans  &kp N6            &kp N7    &kp N8    &kp N9        &kp N0        &kp DOLLAR
-&trans     &kp LESS_THAN  &division  &kp STAR  &kp MINUS      &kp PLUS        &trans  &kp GREATER_THAN  &quote    &comma    &period       &period_plus  &trans
-&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans            &trans    &trans    &trans        &trans
+&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans      &trans    &trans    &trans        &trans            &trans
+&trans     &kp TILDE      &kp AT     &kp HASH  &kp AMPERSAND  &group_begin    &trans  &group_end  &kp PIPE  &kp BSLH  &period_plus  &trans            &trans
+&kp CARET  &kp N1         &kp N2     &kp N3    &kp N4         &kp N5          &trans  &kp N6      &kp N7    &kp N8    &kp N9        &kp N0            &kp DOLLAR
+&trans     &kp LESS_THAN  &division  &kp STAR  &kp MINUS      &kp PLUS        &trans  &kp EQUAL   &quote    &comma    &period       &kp GREATER_THAN  &trans
+&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans      &trans    &trans    &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
             display-name = "layer 4";
         };
 
-        layer4 {
+        functions {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6    &trans  &kp F7  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "layer 5";
+            display-name = "functions";
         };
 
         layer5 {
