@@ -6,7 +6,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -58,13 +57,6 @@
         bindings = <&kp COMMA>, <&kp SEMI>;
     };
 
-    new_behavior: new_behavior {
-        compatible = "zmk,behavior-tap-dance";
-        label = "NEW_BEHAVIOR";
-        #binding-cells = <0>;
-        bindings = <&kp EXCL>, <&kp QMARK>;
-    };
-
     quote: quote {
         compatible = "zmk,behavior-tap-dance";
         label = "QUOTE";
@@ -72,25 +64,11 @@
         bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
     };
 
-    regex_edge: regex_edge {
-        compatible = "zmk,behavior-tap-dance";
-        label = "REGEX_EDGE";
-        #binding-cells = <0>;
-        bindings = <&kp CARET>, <&kp DOLLAR>;
-    };
-
     division: division {
         compatible = "zmk,behavior-tap-dance";
         label = "DIVISION";
         #binding-cells = <0>;
         bindings = <&kp SLASH>, <&kp PERCENT>;
-    };
-
-    compare: compare {
-        compatible = "zmk,behavior-tap-dance";
-        label = "COMPARE";
-        #binding-cells = <0>;
-        bindings = <&kp LT>, <&kp GT>;
     };
 
     group_begin: group_begin {
@@ -107,11 +85,27 @@
         bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
     };
 
-    underscore: underscore {
-        compatible = "zmk,behavior-tap-dance";
-        label = "UNDERSCORE";
-        #binding-cells = <0>;
-        bindings = <&kp U>, <&kp UNDERSCORE>;
+    tap_hold: tap_hold {
+        compatible = "zmk,behavior-hold-tap";
+        label = "TAP_HOLD";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+    };
+
+    encoder_page: encoder_page {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "ENCODER_PAGE";
+        #sensor-binding-cells = <0>;
+        bindings = <&kp PAGE_DOWN>, <&kp PAGE_UP>;
+    };
+
+    bt_nav: bt_nav {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "BT_NAV";
+        #sensor-binding-cells = <0>;
+        bindings = <&bt BT_NXT>, <&bt BT_NXT>;
     };
 
     behaviors {
@@ -178,14 +172,14 @@
 
         base_layer {
             bindings = <
-&none       &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &none
-&none       &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &none
-&none       &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp UNDER   &none
-&none       &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp SPACE  &kp BACKSPACE    &kp TAB     &none
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&none       &kp N1                &kp N2                &kp N3             &kp N4             &kp N5       &mmv MOVE_UP     &kp N6     &kp N7              &kp N8             &kp N9                 &kp N0                &none
+&none       &kp Q                 &kp W                 &kp E              &kp R              &kp T        &mmv MOVE_DOWN   &kp Y      &kp U               &kp I              &kp O                  &kp P                 &none
+&kp HOME    &tap_hold A LEFT_WIN  &tap_hold S LEFT_ALT  &tap_hold D LSHFT  &tap_hold F LSHFT  &kp G        &mmv MOVE_LEFT   &kp H      &tap_hold J RSHIFT  &tap_hold K RCTRL  &tap_hold L RIGHT_ALT  &tap_hold UNDER LWIN  &kp END
+&none       &kp Z                 &kp X                 &kp C              &kp V              &kp B        &mmv MOVE_RIGHT  &kp N      &kp M               &kp SPACE          &kp BACKSPACE          &kp TAB               &none
+&kp C_MUTE  &kp LCTRL             &kp LEFT_GUI          &kp LEFT_ALT       &mo 1              &kp SPACE    &mkp LCLK        &kp SPACE  &kp ENTER           &mo 2              &kp RIGHT_SHIFT        &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&encoder_page>;
             display-name = "base_layer";
         };
 
@@ -204,37 +198,37 @@
 
         layer2 {
             bindings = <
-&kp TILDE       &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&studio_unlock  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans          &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans          &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans          &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&bootloader  &soft_off     &sys_reset    &trans        &bt BT_CLR    &bt BT_CLR_ALL    &trans  &trans  &trans           &trans  &sys_reset  &soft_off  &bootloader
+&trans       &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans           &trans  &trans      &trans     &trans
+&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans  &trans  &rgb_ug RGB_TOG  &trans  &trans      &trans     &trans
+&trans       &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans           &trans  &trans      &trans     &trans
+&trans       &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans           &trans  &trans      &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&bt_nav>;
             display-name = "layer 3";
         };
 
-        layer3 {
+        symbols {
             bindings = <
-&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans      &trans    &trans    &trans        &trans            &trans
-&trans     &kp TILDE      &kp AT     &kp HASH  &kp AMPERSAND  &group_begin    &trans  &group_end  &kp PIPE  &kp BSLH  &period_plus  &trans            &trans
-&kp CARET  &kp N1         &kp N2     &kp N3    &kp N4         &kp N5          &trans  &kp N6      &kp N7    &kp N8    &kp N9        &kp N0            &kp DOLLAR
-&trans     &kp LESS_THAN  &division  &kp STAR  &kp MINUS      &kp PLUS        &trans  &kp EQUAL   &quote    &comma    &period       &kp GREATER_THAN  &trans
-&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans      &trans    &trans    &trans        &trans
+&trans     &trans                 &trans                 &trans              &trans                   &trans          &trans  &trans      &trans              &trans              &trans                  &trans             &trans
+&trans     &kp TILDE              &kp AT                 &kp HASH            &kp AMPERSAND            &group_begin    &trans  &group_end  &kp PIPE            &kp BSLH            &period_plus            &trans             &trans
+&kp CARET  &tap_hold N1 LEFT_WIN  &tap_hold N2 LEFT_ALT  &tap_hold N3 LCTRL  &tap_hold N4 LEFT_SHIFT  &kp N5          &trans  &kp N6      &tap_hold N7 RSHFT  &tap_hold N8 RCTRL  &tap_hold N9 RIGHT_ALT  &tap_hold N0 RWIN  &kp LS(DOLLAR)
+&trans     &kp LESS_THAN          &division              &kp STAR            &kp MINUS                &kp PLUS        &trans  &kp EQUAL   &quote              &comma              &period                 &kp GREATER_THAN   &trans
+&trans     &trans                 &trans                 &trans              &trans                   &trans          &trans  &trans      &trans              &trans              &trans                  &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
-            display-name = "layer 4";
+            sensor-bindings = <&encoder_page>;
+            display-name = "symbols";
         };
 
         functions {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
-&kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6    &trans  &kp F7  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans
+&none  &none     &none     &none      &none      &none    &trans  &none           &none           &none         &none            &none  &none
+&none  &none     &none     &none      &none      &none    &trans  &none           &none           &none         &none            &none  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
+&none  &none     &none     &none      &none      &none    &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
+&none  &none     &none     &none      &none      &none    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK     &none            &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -243,11 +237,11 @@
 
         layer5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans         &trans       &trans     &trans           &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans         &kp INSERT   &trans     &kp PRINTSCREEN  &trans
+&kp HOME  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN       &kp UP       &kp RIGHT  &trans           &kp END
+&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &kp PAGE_DOWN  &kp PAGE_UP  &trans     &trans           &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans         &trans       &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
