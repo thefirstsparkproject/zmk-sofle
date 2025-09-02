@@ -37,37 +37,72 @@
         tap-ms = <100>;
     };
 
-    period_dance: period_dance {
+    period: period {
         compatible = "zmk,behavior-tap-dance";
-        label = "PERIOD_DANCE";
+        label = "PERIOD";
         #binding-cells = <0>;
-        bindings = <&kp PERIOD>, <&kp COLON>, <&kp EXCLAMATION>, <&kp QUESTION>;
+        bindings = <&kp DOT>, <&kp COLON>;
     };
 
-    comma_dance: comma_dance {
+    period_plus: period_plus {
         compatible = "zmk,behavior-tap-dance";
-        label = "COMMA_DANCE";
+        label = "PERIOD_PLUS";
         #binding-cells = <0>;
-        bindings = <&kp COMMA>, <&kp SEMICOLON>;
+        bindings = <&kp EXCL>, <&kp QMARK>;
     };
 
-    quote_dance: quote_dance {
+    comma: comma {
         compatible = "zmk,behavior-tap-dance";
-        label = "QUOTE_DANCE";
+        label = "COMMA";
         #binding-cells = <0>;
-        bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>, <&kp GRAVE>;
+        bindings = <&kp COMMA>, <&kp SEMI>;
     };
 
-    group_open_dance: group_open_dance {
+    new_behavior: new_behavior {
         compatible = "zmk,behavior-tap-dance";
-        label = "GROUP_OPEN_DANCE";
+        label = "NEW_BEHAVIOR";
+        #binding-cells = <0>;
+        bindings = <&kp EXCL>, <&kp QMARK>;
+    };
+
+    quote: quote {
+        compatible = "zmk,behavior-tap-dance";
+        label = "QUOTE";
+        #binding-cells = <0>;
+        bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
+    };
+
+    regex_edge: regex_edge {
+        compatible = "zmk,behavior-tap-dance";
+        label = "REGEX_EDGE";
+        #binding-cells = <0>;
+        bindings = <&kp CARET>, <&kp DOLLAR>;
+    };
+
+    division: division {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DIVISION";
+        #binding-cells = <0>;
+        bindings = <&kp SLASH>, <&kp PERCENT>;
+    };
+
+    compare: compare {
+        compatible = "zmk,behavior-tap-dance";
+        label = "COMPARE";
+        #binding-cells = <0>;
+        bindings = <&kp LT>, <&kp GT>;
+    };
+
+    group_begin: group_begin {
+        compatible = "zmk,behavior-tap-dance";
+        label = "GROUP_BEGIN";
         #binding-cells = <0>;
         bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC>;
     };
 
-    group_close_dance: group_close_dance {
+    group_end: group_end {
         compatible = "zmk,behavior-tap-dance";
-        label = "GROUP_CLOSE_DANCE";
+        label = "GROUP_END";
         #binding-cells = <0>;
         bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
     };
@@ -165,11 +200,11 @@
 
         layer3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans            &trans    &trans    &trans        &trans        &trans
+&trans     &kp TILDE      &kp AT     &kp HASH  &kp AMPERSAND  &group_begin    &trans  &group_end        &kp PIPE  &kp BSLH  &period_plus  &trans        &trans
+&kp CARET  &kp N1         &kp N2     &kp N3    &kp N4         &kp N5          &trans  &kp N6            &kp N7    &kp N8    &kp N9        &kp N0        &kp DOLLAR
+&trans     &kp LESS_THAN  &division  &kp STAR  &kp MINUS      &kp PLUS        &trans  &kp GREATER_THAN  &quote    &comma    &period       &period_plus  &trans
+&trans     &trans         &trans     &trans    &trans         &trans          &trans  &trans            &trans    &trans    &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -213,19 +248,6 @@
 
             sensor-bindings = <&scroll_encoder>;
             display-name = "layer 7";
-        };
-
-        layer10 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA  &trans      &trans        &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans        &trans         &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6     &kp N7      &kp N8        &kp N9         &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA  &kp PERIOD  &comma_dance  &period_dance  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans        &trans         &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-            display-name = "layer 11";
         };
 
         layer7 {
@@ -330,6 +352,16 @@
 
             sensor-bindings = <&scroll_encoder>;
             display-name = "layer 16";
+        };
+
+        layer_15 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
