@@ -28,17 +28,17 @@ layers:
   - P
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
-  - {t: LEFT WIN, h: A}
-  - {t: '$$mdi:apple-keyboard-option$$', h: S}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: D}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: F}
+  - {t: A, h: LEFT WIN}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - '&hardware_mode'
-  - {t: '$$mdi:apple-keyboard-shift$$', h: J}
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: L}
-  - {t: LWIN, h: _}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: _, h: RWIN}
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Z
@@ -93,17 +93,17 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - ^
-  - {t: LEFT WIN, h: '1'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '2'}
-  - {t: '$$mdi:apple-keyboard-control$$', h: '3'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '4'}
+  - {t: '1', h: LWIN}
+  - {t: '2', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '3', h: '$$mdi:apple-keyboard-control$$', s: '#'}
+  - {t: '4', h: '$$mdi:apple-keyboard-shift$$', s: $}
   - {t: '5', s: '%'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '6', s: ^}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '7'}
-  - {t: '$$mdi:apple-keyboard-control$$', h: '8'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '9'}
-  - {t: RWIN, h: '0'}
+  - {t: '7', h: '$$mdi:apple-keyboard-shift$$', s: '&'}
+  - {t: '8', h: '$$mdi:apple-keyboard-control$$', s: '*'}
+  - {t: '9', h: '$$mdi:apple-keyboard-option$$', s: (}
+  - {t: '0', h: RWIN, s: )}
   - Sft+$
   - {t: '$$mdi:transfer$$', type: trans}
   - <
@@ -212,52 +212,52 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&ml_ctrl'
+  - '&nav_zoom'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - LGUI
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-up$$
-  - $$mdi:pan-right$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&ml_alt'
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&ml_shift'
+  - '&nav_pan'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   keyboard:
