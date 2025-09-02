@@ -108,6 +108,27 @@
         bindings = <&bt BT_NXT>, <&bt BT_NXT>;
     };
 
+    mouse_mode: mouse_mode {
+        compatible = "zmk,behavior-tap-dance";
+        label = "MOUSE_MODE";
+        #binding-cells = <0>;
+        bindings = <&kp M>, <&to 3>;
+    };
+
+    keyboard_mode: keyboard_mode {
+        compatible = "zmk,behavior-tap-dance";
+        label = "KEYBOARD_MODE";
+        #binding-cells = <0>;
+        bindings = <&kp V>, <&to 4>;
+    };
+
+    hardware_mode: hardware_mode {
+        compatible = "zmk,behavior-tap-dance";
+        label = "HARDWARE_MODE";
+        #binding-cells = <0>;
+        bindings = <&kp H>, <&to 2>;
+    };
+
     behaviors {
     };
 
@@ -172,11 +193,11 @@
 
         base_layer {
             bindings = <
-&none       &kp N1                &kp N2                &kp N3             &kp N4             &kp N5    &mmv MOVE_UP     &kp N6  &kp N7              &kp N8             &kp N9                 &kp N0                &none
-&none       &kp Q                 &kp W                 &kp E              &kp R              &kp T     &mmv MOVE_DOWN   &kp Y   &kp U               &kp I              &kp O                  &kp P                 &none
-&kp HOME    &tap_hold A LEFT_WIN  &tap_hold S LEFT_ALT  &tap_hold D LSHFT  &tap_hold F LSHFT  &kp G     &mmv MOVE_LEFT   &kp H   &tap_hold J RSHIFT  &tap_hold K RCTRL  &tap_hold L RIGHT_ALT  &tap_hold UNDER LWIN  &kp END
-&none       &kp Z                 &kp X                 &kp C              &kp V              &kp B     &mmv MOVE_RIGHT  &kp N   &kp M               &kp SPACE          &kp BACKSPACE          &kp TAB               &none
-&kp C_MUTE  &trans                &trans                &trans             &trans             &trans    &mkp LCLK        &trans  &trans              &trans             &trans                 &trans
+&none       &kp N1                &kp N2                &kp N3             &kp N4             &kp N5    &mmv MOVE_UP     &kp N6          &kp N7              &kp N8             &kp N9                 &kp N0                &none
+&none       &kp Q                 &kp W                 &kp E              &kp R              &kp T     &mmv MOVE_DOWN   &kp Y           &kp U               &kp I              &kp O                  &kp P                 &none
+&kp HOME    &tap_hold A LEFT_WIN  &tap_hold S LEFT_ALT  &tap_hold D LSHFT  &tap_hold F LSHFT  &kp G     &mmv MOVE_LEFT   &hardware_mode  &tap_hold J RSHIFT  &tap_hold RCTRL K  &tap_hold L RIGHT_ALT  &tap_hold UNDER LWIN  &kp END
+&none       &kp Z                 &kp X                 &kp C              &keyboard_mode     &kp B     &mmv MOVE_RIGHT  &kp N           &mouse_mode         &kp SPACE          &kp BACKSPACE          &kp TAB               &none
+&kp C_MUTE  &trans                &trans                &mo 5              &mo 1              &trans    &mkp LCLK        &trans          &trans              &trans             &trans                 &trans
             >;
 
             sensor-bindings = <&encoder_page>;
@@ -198,11 +219,11 @@
 
         hardware {
             bindings = <
-&bootloader  &soft_off     &sys_reset    &trans        &bt BT_CLR    &bt BT_CLR_ALL    &trans  &trans  &trans           &trans  &sys_reset  &soft_off  &bootloader
-&trans       &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans           &trans  &trans      &trans     &trans
-&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans  &trans  &rgb_ug RGB_TOG  &trans  &trans      &trans     &trans
-&trans       &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans           &trans  &trans      &trans     &trans
-&trans       &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans           &trans  &trans      &trans
+&bootloader  &soft_off     &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none  &sys_reset  &soft_off  &bootloader
+&none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none      &none
+&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none  &none       &none      &none
+&none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none      &none
+&none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none
             >;
 
             sensor-bindings = <&bt_nav>;
@@ -222,17 +243,27 @@
             display-name = "mouse";
         };
 
-        layer5 {
+        keyboard {
             bindings = <
-&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans         &trans       &trans     &trans           &trans
-&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans         &kp INSERT   &trans     &kp PRINTSCREEN  &trans
-&kp HOME  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN       &kp UP       &kp RIGHT  &trans           &kp END
-&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &kp PAGE_DOWN  &kp PAGE_UP  &trans     &trans           &trans
-&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans         &trans       &trans     &trans
+&none     &none   &none   &none   &none   &none    &none  &none           &none     &none       &none      &none            &none
+&none     &none   &none   &none   &none   &none    &none  &none           &none     &kp INSERT  &none      &kp PRINTSCREEN  &none
+&kp HOME  &trans  &trans  &trans  &trans  &none    &none  &kp LEFT_ARROW  &kp DOWN  &kp UP      &kp RIGHT  &none            &kp END
+&none     &none   &none   &none   &none   &none    &none  &none           &none     &none       &none      &none            &none
+&none     &none   &none   &none   &none   &none    &none  &none           &none     &none       &none      &none
             >;
 
             sensor-bindings = <&encoder_page>;
-            display-name = "layer 6";
+            display-name = "keyboard";
+        };
+
+        fn {
+            bindings = <
+&none  &none   &none   &none   &none   &none    &none  &none  &none   &none    &none    &none    &none
+&none  &none   &none   &none   &none   &none    &none  &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none  &trans  &trans  &trans  &trans  &none    &none  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none  &none   &none   &none   &none   &none    &none  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&none  &none   &none   &none   &none   &none    &none  &none  &none   &none    &none    &none
+            >;
         };
     };
 };
