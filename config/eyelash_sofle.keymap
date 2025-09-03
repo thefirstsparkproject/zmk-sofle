@@ -147,7 +147,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "SYMBOL_LAYER_ACCESS";
         #binding-cells = <0>;
-        bindings = <&sl_or_mo 2 2>, <&to 2>;
+        bindings = <&sl_or_mo 0 0>, <&to 0>;
     };
 
     behaviors {
@@ -166,7 +166,7 @@
         compose_accent: compose_accent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt CAPS &sl 0>;
+            bindings = <&kt CAPS &sl 2>;
             label = "COMPOSE_ACCENT";
         };
 
@@ -231,13 +231,6 @@
 
             label = "ML_ALT";
         };
-
-        triple_layer_access: triple_layer_access {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "TRIPLE_LAYER_ACCESS";
-        };
     };
 
     keymap {
@@ -245,14 +238,14 @@
 
         base_layer {
             bindings = <
-&trans      &trans                    &trans                    &trans                 &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &trans                 &trans                &trans                        &trans
-&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                         &trans
-&kp ESCAPE  &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN SEMICOLON  &kp ENTER
-&trans      &kp Z                     &kp X                     &kp C                  &kp K                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &kp COMMA              &kp PERIOD            &kp SLASH                     &trans
-&kp C_MUTE  &to 3                     &trans                    &sl 2                  &symbol_layer_access    &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER              &kp TAB                &compose_accent       &to 3
+&trans      &trans                    &trans                    &trans                 &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &trans                 &trans                &trans                    &trans
+&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                     &trans
+&kp ESC     &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN UNDER  &kp ENTER
+&kp TAB     &kp Z                     &kp X                     &kp C                  &kp K                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &trans                 &trans                &trans                    &trans
+&kp C_MUTE  &trans                    &trans                    &sl 3                  &symbol_layer_access    &kp SPACE    &mkp LCLK        &kp BACKSPACE  &key_repeat            &to 0                  &compose_accent       &to 6
             >;
 
-            sensor-bindings = <&encoder_page>;
+            sensor-bindings = <&scroll_encoder>;
             display-name = "base_layer";
         };
 
@@ -266,30 +259,27 @@
             >;
         };
 
-        layer_2 {
+        accent {
+            bindings = <
+&trans  &trans       &trans         &trans     &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans         &trans     &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(DQT)  &kp LS(CARET)  &kp GRAVE  &kp SQT  &kp COMMA    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans         &trans     &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans         &trans     &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        hub {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &sl 4   &trans    &trans  &to 6   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &to 5   &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        hardware {
-            bindings = <
-&bootloader  &soft_off     &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none  &sys_reset  &soft_off  &bootloader
-&none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none      &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none  &none       &none      &none
-&none        &none         &none         &none         &none         &none             &none  &none  &none            &none  &none       &none      &none
-&none        &none         &none         &none         &none         &trans            &none  &none  &none            &none  &none       &none
-            >;
-
-            sensor-bindings = <&bt_nav>;
-            display-name = "hardware";
-        };
-
-        layer_5 {
+        fn {
             bindings = <
 &trans  &trans                     &trans                     &trans                  &trans                       &trans    &trans  &trans  &trans                    &trans                   &trans                  &trans                  &trans
 &trans  &kp F1                     &kp F2                     &kp F3                  &kp F4                       &trans    &trans  &trans  &kp F13                   &kp F14                  &kp F15                 &kp F16                 &trans
@@ -299,54 +289,27 @@
             >;
         };
 
-        layer_6 {
+        mouse_control {
             bindings = <
-&trans  &trans    &trans         &trans         &trans         &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans         &trans         &trans         &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp BSLH  &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)   &kp LS(AMPS)    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &kp LS(TILDE)  &kp GRAVE      &kp LS(CARET)  &kp LS(PIPE)    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans         &trans         &trans         &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans            &trans  &trans     &trans             &trans            &trans             &trans            &trans
+&trans  &trans    &trans    &trans     &trans     &trans            &trans  &trans     &mmv MOVE_X(-100)  &mmv MOVE_Y(100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &msc SCRL_UP      &trans  &kp PG_UP  &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &trans
+&trans  &trans    &trans    &trans     &trans     &msc SCRL_DOWN    &trans  &kp PG_DN  &kp LEFT           &kp DOWN          &kp UP             &kp RIGHT         &trans
+&trans  &trans    &trans    &mkp RCLK  &mkp MCLK  &mkp LCLK         &trans  &trans     &trans             &trans            &trans             &trans
             >;
         };
 
-        layer_7 {
+        hardware {
             bindings = <
-&trans  &trans         &trans        &trans      &trans         &trans          &trans  &trans         &trans        &trans        &trans    &trans  &trans
-&trans  &trans         &trans        &trans      &trans         &trans          &trans  &trans         &trans        &trans        &trans    &trans  &trans
-&trans  &kp GRAVE      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)    &trans  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(PIPE)  &kp BSLH  &trans  &trans
-&trans  &kp LS(TILDE)  &trans        &trans      &trans         &trans          &trans  &trans         &trans        &trans        &trans    &trans  &trans
-&trans  &trans         &trans        &trans      &trans         &trans          &trans  &trans         &trans        &trans        &trans    &trans
+&bootloader  &soft_off     &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none   &sys_reset  &soft_off  &bootloader
+&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
+&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none   &none       &none      &none
+&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
+&none        &none         &none         &none         &none         &trans            &none  &none  &none            &trans  &none       &none
             >;
-        };
 
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LA(LSHFT)  &kp LCTRL      &kp LC(LSHFT)  &kp LCTRL    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LALT       &kp LA(LSHFT)  &kp LSHFT      &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_91 {
-            bindings = <
-&trans     &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans     &trans    &trans    &trans    &trans
-&kp GRAVE  &kp N1                      &kp N2                       &kp N3                     &kp N4                               &kp N5                         &trans  &kp N6                                &kp N7     &kp N8    &kp N9    &kp N0    &kp MINUS
-&trans     &tap_hold_kp PERCENT SLASH  &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &kp SQT    &kp LBKT  &kp RBKT  &kp BSLH  &kp EQUAL
-&trans     &trans                      &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &trans                                &kp COMMA  &kp DOT   &kp FSLH  &kp SEMI  &trans
-&trans     &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans     &trans    &trans    &trans
-            >;
+            sensor-bindings = <&bt_nav>;
+            display-name = "hardware";
         };
     };
 };
