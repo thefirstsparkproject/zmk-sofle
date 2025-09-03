@@ -133,6 +133,23 @@
         tapping-term-ms = <200>;
     };
 
+    sl_or_mo: sl_or_mo {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SL_OR_MO";
+        bindings = <&mo>, <&sl>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "balanced";
+    };
+
+    symbol_layer_access: symbol_layer_access {
+        compatible = "zmk,behavior-tap-dance";
+        label = "SYMBOL_LAYER_ACCESS";
+        #binding-cells = <0>;
+        bindings = <&sl_or_mo 2 2>, <&to 2>;
+    };
+
     behaviors {
     };
 
@@ -142,16 +159,6 @@
         softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <22 23>;
-        };
-
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <15 14>;
         };
     };
 
@@ -224,6 +231,13 @@
 
             label = "ML_ALT";
         };
+
+        triple_layer_access: triple_layer_access {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "TRIPLE_LAYER_ACCESS";
+        };
     };
 
     keymap {
@@ -231,15 +245,25 @@
 
         base_layer {
             bindings = <
-&trans      &trans                    &trans                    &trans                 &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &trans                 &trans                &trans                        &trans
-&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                         &trans
-&trans      &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN SEMICOLON  &trans
-&trans      &kp Z                     &kp X                     &kp C                  &kp K                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &kp RS(UNDERSCORE)     &kp PERIOD            &kp SLASH                     &trans
-&kp C_MUTE  &to 2                     &trans                    &sl 1                  &none                   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER              &kp TAB                &compose_accent       &to 2
+&trans      &trans                    &trans                    &trans                 &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &trans                 &trans                &trans                         &trans
+&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                          &trans
+&kp ESCAPE  &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN UNDERSCORE  &kp ENTER
+&trans      &kp Z                     &kp X                     &kp C                  &kp K                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &kp RS(UNDERSCORE)     &kp PERIOD            &kp SLASH                      &trans
+&kp C_MUTE  &to 3                     &trans                    &sl 2                  &symbol_layer_access    &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER              &kp TAB                &compose_accent       &to 3
             >;
 
             sensor-bindings = <&encoder_page>;
             display-name = "base_layer";
+        };
+
+        symbols {
+            bindings = <
+&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans                                   &trans
+&trans  &kp N1                      &kp N2                       &kp N3                     &kp N4                               &kp N5                         &trans  &kp N6                                &kp N7                        &kp N8                     &kp N9                                  &kp N0                                   &trans
+&trans  &tap_hold_kp PERCENT SLASH  &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &kp LS(LPAR)                  &kp LS(RPAR)               &tap_hold_kp RIGHT_BRACKET RIGHT_BRACE  &tap_hold_kp SINGLE_QUOTE DOUBLE_QUOTES  &trans
+&trans  &trans                      &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &trans                                &tap_hold_kp SEMICOLON COMMA  &tap_hold_kp COLON PERIOD  &tap_hold_kp QUESTION EXCLAMATION       &trans                                   &trans
+&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans
+            >;
         };
 
         layer_2 {
@@ -315,13 +339,13 @@
             >;
         };
 
-        layer_8 {
+        layer_9 {
             bindings = <
-&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans                                   &trans
-&trans  &kp N1                      &kp N2                       &kp N3                     &kp N4                               &kp N5                         &trans  &kp N6                                &kp N7                        &kp N8                     &kp N9                                  &kp N0                                   &trans
-&trans  &tap_hold_kp PERCENT SLASH  &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &kp LS(LPAR)                  &kp LS(RPAR)               &tap_hold_kp RIGHT_BRACKET RIGHT_BRACE  &tap_hold_kp SINGLE_QUOTE DOUBLE_QUOTES  &trans
-&trans  &trans                      &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &trans                                &tap_hold_kp SEMICOLON COMMA  &tap_hold_kp COLON PERIOD  &tap_hold_kp QUESTION EXCLAMATION       &trans                                   &trans
-&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans
+&trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LA(LSHFT)  &kp LCTRL      &kp LC(LSHFT)  &kp LCTRL    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LALT       &kp LA(LSHFT)  &kp LSHFT      &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
