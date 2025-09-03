@@ -123,6 +123,16 @@
         flavor = "balanced";
     };
 
+    tap_hold_kp: tap_hold_kp {
+        compatible = "zmk,behavior-hold-tap";
+        label = "TAP_HOLD_KP";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+    };
+
     behaviors {
     };
 
@@ -302,6 +312,16 @@
 &trans  &kp GRAVE      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)    &trans  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(PIPE)  &kp BSLH  &trans  &trans
 &trans  &kp LS(TILDE)  &trans        &trans      &trans         &trans          &trans  &trans         &trans        &trans        &trans    &trans  &trans
 &trans  &trans         &trans        &trans      &trans         &trans          &trans  &trans         &trans        &trans        &trans    &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans                                   &trans
+&trans  &kp N1                      &kp N2                       &kp N3                     &kp N4                               &kp N5                         &trans  &kp N6                                &kp N7                        &kp N8                     &kp N9                                  &kp N0                                   &trans
+&trans  &tap_hold_kp PERCENT SLASH  &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &kp LS(LPAR)                  &kp LS(RPAR)               &tap_hold_kp RIGHT_BRACKET RIGHT_BRACE  &tap_hold_kp SINGLE_QUOTE DOUBLE_QUOTES  &trans
+&trans  &trans                      &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &trans                                &tap_hold_kp SEMICOLON COMMA  &tap_hold_kp COLON PERIOD  &tap_hold_kp QUESTION EXCLAMATION       &trans                                   &trans
+&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans
             >;
         };
     };
