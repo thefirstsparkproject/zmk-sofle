@@ -245,10 +245,10 @@
 
         base_layer {
             bindings = <
-&trans      &trans                    &trans                    &trans                 &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &trans                 &trans                &trans                         &trans
-&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                          &trans
-&kp ESCAPE  &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN UNDERSCORE  &kp ENTER
-&trans      &kp Z                     &kp X                     &kp C                  &kp K                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &kp RS(UNDERSCORE)     &kp PERIOD            &kp SLASH                      &trans
+&trans      &trans                    &trans                    &trans                 &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &trans                 &trans                &trans                        &trans
+&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                         &trans
+&kp ESCAPE  &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN SEMICOLON  &kp ENTER
+&trans      &kp Z                     &kp X                     &kp C                  &kp K                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &kp COMMA              &kp PERIOD            &kp SLASH                     &trans
 &kp C_MUTE  &to 3                     &trans                    &sl 2                  &symbol_layer_access    &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp ENTER              &kp TAB                &compose_accent       &to 3
             >;
 
@@ -269,7 +269,7 @@
         layer_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -289,33 +289,13 @@
             display-name = "hardware";
         };
 
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans    &trans     &trans         &trans           &trans  &trans  &trans        &trans        &trans    &trans  &trans
-&trans  &trans  &trans    &trans     &kp LS(QMARK)  &trans           &trans  &trans  &trans        &trans        &trans    &trans  &trans
-&trans  &trans  &kp SEMI  &kp COMMA  &kp PERIOD     &kp LS(COLON)    &trans  &trans  &kp LS(LPAR)  &kp LS(LBRC)  &kp LBKT  &trans  &trans
-&trans  &trans  &trans    &trans     &kp LS(EXCL)   &trans           &trans  &trans  &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT  &trans  &trans
-&trans  &trans  &trans    &trans     &trans         &trans           &trans  &trans  &trans        &trans        &trans    &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans         &trans        &trans      &trans        &trans          &trans  &trans         &trans    &trans       &trans     &trans        &trans
-&trans  &trans         &trans        &trans      &trans        &trans          &trans  &trans         &trans    &trans       &trans     &trans        &trans
-&trans  &kp FSLH       &kp LS(STAR)  &kp MINUS   &kp LS(PLUS)  &kp EQUAL       &trans  &kp LS(CARET)  &kp APOS  &kp LS(DQT)  &kp GRAVE  &kp LS(DLLR)  &trans
-&trans  &kp LS(PRCNT)  &kp LS(LT)    &kp LS(GT)  &kp LS(PIPE)  &kp LS(AMPS)    &trans  &kp HOME       &trans    &trans       &trans     &kp END       &trans
-&trans  &trans         &trans        &trans      &trans        &trans          &trans  &trans         &trans    &trans       &trans     &trans
-            >;
-        };
-
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                     &trans                     &trans                  &trans                       &trans    &trans  &trans  &trans                    &trans                   &trans                  &trans                  &trans
+&trans  &kp F1                     &kp F2                     &kp F3                  &kp F4                       &trans    &trans  &trans  &kp F13                   &kp F14                  &kp F15                 &kp F16                 &trans
+&trans  &home_row_mod LEFT_WIN F5  &home_row_mod LEFT_ALT F6  &home_row_mod LCTRL F7  &home_row_mod LEFT_SHIFT F8  &trans    &trans  &trans  &home_row_mod RSHIFT F17  &home_row_mod RCTRL F18  &home_row_mod RALT F19  &home_row_mod RWIN F20  &trans
+&trans  &kp F9                     &kp F10                    &kp F11                 &kp F12                      &trans    &trans  &trans  &kp F21                   &kp F22                  &kp F23                 &kp F24                 &trans
+&trans  &trans                     &trans                     &trans                  &trans                       &trans    &trans  &trans  &trans                    &trans                   &trans                  &trans
             >;
         };
 
@@ -346,6 +326,26 @@
 &trans  &trans  &kp LALT       &kp LA(LSHFT)  &kp LSHFT      &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans         &trans         &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_91 {
+            bindings = <
+&trans     &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans     &trans    &trans    &trans    &trans
+&kp GRAVE  &kp N1                      &kp N2                       &kp N3                     &kp N4                               &kp N5                         &trans  &kp N6                                &kp N7     &kp N8    &kp N9    &kp N0    &kp MINUS
+&trans     &tap_hold_kp PERCENT SLASH  &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &kp SQT    &kp LBKT  &kp RBKT  &kp BSLH  &kp EQUAL
+&trans     &trans                      &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &trans                                &kp COMMA  &kp DOT   &kp FSLH  &kp SEMI  &trans
+&trans     &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans     &trans    &trans    &trans
             >;
         };
     };
