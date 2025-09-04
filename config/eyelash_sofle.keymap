@@ -150,6 +150,16 @@
         bindings = <&sl_or_mo 0 0>, <&to 0>;
     };
 
+    tap_hold_c: tap_hold_c {
+        compatible = "zmk,behavior-hold-tap";
+        label = "TAP_HOLD_C";
+        bindings = <&c_cedilla>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "tap-preferred";
+    };
+
     behaviors {
     };
 
@@ -163,13 +173,6 @@
     };
 
     macros {
-        compose_accent: compose_accent {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt CAPS &sl 2>;
-            label = "COMPOSE_ACCENT";
-        };
-
         nav_pan: lclk_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -231,6 +234,20 @@
 
             label = "ML_ALT";
         };
+
+        accent: grave_accent {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp CAPSLOCK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "GRAVE_ACCENT";
+        };
+
+        c_cedilla: c_cedilla {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&accent COMMA &kp C>;
+            label = "C_CEDILLA";
+        };
     };
 
     keymap {
@@ -238,14 +255,13 @@
 
         base_layer {
             bindings = <
-&trans      &trans                    &trans                    &trans                 &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &trans                 &trans                &trans                    &trans
-&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                     &trans
-&kp ESC     &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN UNDER  &kp ENTER
-&kp TAB     &kp Z                     &kp X                     &kp C                  &kp K                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &trans                 &trans                &trans                    &trans
-&kp C_MUTE  &trans                    &trans                    &sl 3                  &symbol_layer_access    &kp SPACE    &mkp LCLK        &kp BACKSPACE  &key_repeat            &to 0                  &compose_accent       &to 6
+&trans      &trans                    &trans                    &trans                 &trans                  &trans    &mmv MOVE_UP     &trans       &trans                 &to 0                  &trans                &trans                    &trans
+&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T     &mmv MOVE_DOWN   &kp Y        &kp U                  &kp I                  &kp O                 &kp P                     &kp DEL
+&kp ESC     &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G     &mmv MOVE_LEFT   &kp H        &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN UNDER  &kp ENTER
+&kp TAB     &kp Z                     &kp X                     &tap_hold_c 0 C        &kp V                   &kp B     &mmv MOVE_RIGHT  &kp N        &kp M                  &accent SQT            &accent GRAVE         &accent CARET             &accent DOUBLE_QUOTES
+&kp C_MUTE  &trans                    &trans                    &sl 3                  &kp SPACE               &mo 1     &mkp LCLK        &key_repeat  &kp BACKSPACE          &trans                 &sl 3                 &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
             display-name = "base_layer";
         };
 
@@ -273,7 +289,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &sl 4   &trans    &trans  &to 6   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &to 4   &trans    &trans  &to 6   &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &to 5   &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
@@ -291,11 +307,11 @@
 
         mouse_control {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans            &trans  &trans     &trans             &trans            &trans             &trans            &trans
-&trans  &trans    &trans    &trans     &trans     &trans            &trans  &trans     &mmv MOVE_X(-100)  &mmv MOVE_Y(100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &msc SCRL_UP      &trans  &kp PG_UP  &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &trans
-&trans  &trans    &trans    &trans     &trans     &msc SCRL_DOWN    &trans  &kp PG_DN  &kp LEFT           &kp DOWN          &kp UP             &kp RIGHT         &trans
-&trans  &trans    &trans    &mkp RCLK  &mkp MCLK  &mkp LCLK         &trans  &trans     &trans             &trans            &trans             &trans
+&trans  &trans    &trans    &trans     &trans     &trans            &trans  &trans             &trans            &trans             &trans            &trans     &trans
+&trans  &trans    &trans    &trans     &trans     &trans            &trans  &mmv MOVE_X(-100)  &mmv MOVE_Y(100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &trans     &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &msc SCRL_UP      &trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &kp PG_UP  &trans
+&trans  &trans    &trans    &trans     &trans     &msc SCRL_DOWN    &trans  &kp LEFT           &kp DOWN          &kp UP             &kp RIGHT         &kp PG_DN  &trans
+&trans  &trans    &trans    &mkp RCLK  &mkp MCLK  &mkp LCLK         &trans  &trans             &trans            &trans             &trans            &trans
             >;
         };
 
@@ -308,7 +324,6 @@
 &none        &none         &none         &none         &none         &trans            &none  &none  &none            &trans  &none       &none
             >;
 
-            sensor-bindings = <&bt_nav>;
             display-name = "hardware";
         };
     };
