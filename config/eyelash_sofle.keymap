@@ -255,11 +255,11 @@
 
         base_layer {
             bindings = <
-&trans        &trans  &trans                    &kp ESCAPE             &trans                  &trans    &mmv MOVE_UP     &trans       &trans                 &to 0                  &kp DELETE            &trans                 &trans
-&trans        &kp Q   &kp W                     &kp E                  &kp R                   &kp T     &mmv MOVE_DOWN   &kp Y        &kp U                  &kp I                  &kp O                 &kp P                  &trans
-&kp TAB       &kp A   &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G     &mmv MOVE_LEFT   &kp H        &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &accent SQT            &kp ENTER
-&kp LEFT_WIN  &kp Z   &kp X                     &tap_hold_c 0 C        &kp V                   &kp B     &mmv MOVE_RIGHT  &kp N        &kp M                  &accent GRAVE          &accent CARET         &accent DOUBLE_QUOTES  &kp RWIN
-&kp C_MUTE    &trans  &trans                    &kp SPACE              &mo 1                   &sl 3     &mkp LCLK        &key_repeat  &kp UNDERSCORE         &kp BACKSPACE          &trans                &trans
+&trans        &trans  &sl 3                     &kp ESCAPE             &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &kp DELETE             &to 0                 &trans                 &trans
+&trans        &kp Q   &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                  &trans
+&kp TAB       &kp A   &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &accent SQT            &kp ENTER
+&kp LEFT_WIN  &kp Z   &kp X                     &tap_hold_c 0 C        &kp V                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &accent GRAVE          &accent CARET         &accent DOUBLE_QUOTES  &kp RWIN
+&kp C_MUTE    &trans  &trans                    &trans                 &mo 1                   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp UNDERSCORE         &key_repeat            &trans                &trans
             >;
 
             display-name = "base_layer";
@@ -267,11 +267,11 @@
 
         symbols {
             bindings = <
-&trans  &trans                       &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans                 &trans
-&trans  &trans                       &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS      &tap_hold_kp RIGHT_BRACKET RIGHT_BRACE  &trans                 &trans
-&trans  &home_row_mod LWIN NUMBER_1  &home_row_mod LEFT_ALT N2    &home_row_mod LCTRL N3     &home_row_mod LSHFT N4               &kp N5                         &trans  &kp N6                                &home_row_mod RSHFT N7        &home_row_mod RCTRL N8     &home_row_mod LEFT_ALT N9               &home_row_mod LWIN N0  &trans
-&trans  &tap_hold_kp PERCENT SLASH   &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp SQT DOUBLE_QUOTES        &tap_hold_kp SEMICOLON COMMA  &tap_hold_kp COLON PERIOD  &tap_hold_kp QUESTION EXCLAMATION       &trans                 &trans
-&trans  &trans                       &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans
+&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                                   &trans                        &trans                                  &trans                             &trans
+&trans  &trans                      &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &kp LEFT_PARENTHESIS                     &kp RIGHT_PARENTHESIS         &tap_hold_kp RIGHT_BRACKET RIGHT_BRACE  &trans                             &trans
+&trans  &kp NUMBER_1                &home_row_mod LEFT_ALT N2    &home_row_mod LCTRL N3     &home_row_mod LSHFT N4               &kp N5                         &trans  &kp N6                                &home_row_mod RSHFT N7                   &home_row_mod RCTRL N8        &home_row_mod LEFT_ALT N9               &kp N0                             &trans
+&trans  &tap_hold_kp PERCENT SLASH  &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp SQT DOUBLE_QUOTES        &tap_hold_kp SINGLE_QUOTE DOUBLE_QUOTES  &tap_hold_kp COMMA SEMICOLON  &tap_hold_kp COLON PERIOD               &tap_hold_kp QUESTION EXCLAMATION  &trans
+&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                                   &trans                        &trans                                  &trans
             >;
 
             label = "symbols";
