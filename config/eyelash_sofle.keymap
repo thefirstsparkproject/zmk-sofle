@@ -255,11 +255,11 @@
 
         base_layer {
             bindings = <
-&trans      &trans                    &trans                    &trans                 &trans                  &trans    &mmv MOVE_UP     &trans       &trans                 &to 0                  &trans                &trans                    &trans
-&trans      &kp Q                     &kp W                     &kp E                  &kp R                   &kp T     &mmv MOVE_DOWN   &kp Y        &kp U                  &kp I                  &kp O                 &kp P                     &kp DEL
-&kp ESC     &home_row_mod LEFT_WIN A  &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G     &mmv MOVE_LEFT   &kp H        &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &home_row_mod RWIN UNDER  &kp ENTER
-&kp TAB     &kp Z                     &kp X                     &tap_hold_c 0 C        &kp V                   &kp B     &mmv MOVE_RIGHT  &kp N        &kp M                  &accent SQT            &accent GRAVE         &accent CARET             &accent DOUBLE_QUOTES
-&kp C_MUTE  &trans                    &trans                    &sl 3                  &kp SPACE               &mo 1     &mkp LCLK        &key_repeat  &kp BACKSPACE          &trans                 &sl 3                 &trans
+&trans        &trans  &trans                    &trans                 &trans                  &trans    &mmv MOVE_UP     &trans       &trans                 &to 0                  &trans                &trans                 &trans
+&kp ESCAPE    &kp Q   &kp W                     &kp E                  &kp R                   &kp T     &mmv MOVE_DOWN   &kp Y        &kp U                  &kp I                  &kp O                 &kp P                  &kp DEL
+&kp TAB       &kp A   &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G     &mmv MOVE_LEFT   &kp H        &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &accent SQT            &kp ENTER
+&kp LEFT_WIN  &kp Z   &kp X                     &tap_hold_c 0 C        &kp V                   &kp B     &mmv MOVE_RIGHT  &kp N        &kp M                  &accent GRAVE          &accent CARET         &accent DOUBLE_QUOTES  &kp RWIN
+&kp C_MUTE    &trans  &trans                    &kp SPACE              &mo 1                   &sl 3     &mkp LCLK        &key_repeat  &kp UNDERSCORE         &kp BACKSPACE          &sl 3                 &trans
             >;
 
             display-name = "base_layer";
