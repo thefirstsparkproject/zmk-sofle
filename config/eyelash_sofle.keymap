@@ -255,11 +255,11 @@
 
         base_layer {
             bindings = <
-&trans        &trans  &trans                    &trans                 &trans                  &trans    &mmv MOVE_UP     &trans       &trans                 &to 0                  &trans                &trans                 &trans
-&kp ESCAPE    &kp Q   &kp W                     &kp E                  &kp R                   &kp T     &mmv MOVE_DOWN   &kp Y        &kp U                  &kp I                  &kp O                 &kp P                  &kp DEL
+&trans        &trans  &trans                    &kp ESCAPE             &trans                  &trans    &mmv MOVE_UP     &trans       &trans                 &to 0                  &kp DELETE            &trans                 &trans
+&trans        &kp Q   &kp W                     &kp E                  &kp R                   &kp T     &mmv MOVE_DOWN   &kp Y        &kp U                  &kp I                  &kp O                 &kp P                  &trans
 &kp TAB       &kp A   &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G     &mmv MOVE_LEFT   &kp H        &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &accent SQT            &kp ENTER
 &kp LEFT_WIN  &kp Z   &kp X                     &tap_hold_c 0 C        &kp V                   &kp B     &mmv MOVE_RIGHT  &kp N        &kp M                  &accent GRAVE          &accent CARET         &accent DOUBLE_QUOTES  &kp RWIN
-&kp C_MUTE    &trans  &trans                    &kp SPACE              &mo 1                   &sl 3     &mkp LCLK        &key_repeat  &kp UNDERSCORE         &kp BACKSPACE          &sl 3                 &trans
+&kp C_MUTE    &trans  &trans                    &kp SPACE              &mo 1                   &sl 3     &mkp LCLK        &key_repeat  &kp UNDERSCORE         &kp BACKSPACE          &trans                &trans
             >;
 
             display-name = "base_layer";
@@ -273,6 +273,8 @@
 &trans  &tap_hold_kp PERCENT SLASH   &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &tap_hold_kp SQT DOUBLE_QUOTES        &tap_hold_kp SEMICOLON COMMA  &tap_hold_kp COLON PERIOD  &tap_hold_kp QUESTION EXCLAMATION       &trans                 &trans
 &trans  &trans                       &trans                       &trans                     &trans                               &trans                         &trans  &trans                                &trans                        &trans                     &trans                                  &trans
             >;
+
+            label = "symbols";
         };
 
         accent {
@@ -283,16 +285,20 @@
 &trans  &trans       &trans         &trans     &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans         &trans     &trans   &trans       &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "accent";
         };
 
         hub {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &to 4   &trans    &trans  &to 6   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &to 4   &trans    &trans  &to 7   &trans  &to 6   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &to 5   &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "hub";
         };
 
         fn {
@@ -303,9 +309,11 @@
 &trans  &kp F9                     &kp F10                    &kp F11                 &kp F12                      &trans    &trans  &trans  &kp F21                   &kp F22                  &kp F23                 &kp F24                 &trans
 &trans  &trans                     &trans                     &trans                  &trans                       &trans    &trans  &trans  &trans                    &trans                   &trans                  &trans
             >;
+
+            label = "fn";
         };
 
-        mouse_control {
+        mouse {
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans            &trans  &trans             &trans            &trans             &trans            &trans     &trans
 &trans  &trans    &trans    &trans     &trans     &trans            &trans  &mmv MOVE_X(-100)  &mmv MOVE_Y(100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &trans     &trans
@@ -313,6 +321,20 @@
 &trans  &trans    &trans    &trans     &trans     &msc SCRL_DOWN    &trans  &kp LEFT           &kp DOWN          &kp UP             &kp RIGHT         &kp PG_DN  &trans
 &trans  &trans    &trans    &mkp RCLK  &mkp MCLK  &mkp LCLK         &trans  &trans             &trans            &trans             &trans            &trans
             >;
+
+            label = "mouse";
+        };
+
+        keyboard {
+            bindings = <
+&trans  &trans  &trans    &trans     &trans   &trans    &trans  &trans    &trans    &trans      &trans     &trans  &trans
+&trans  &trans  &trans    &kp PG_UP  &trans   &trans    &trans  &trans    &trans    &kp INSERT  &trans     &trans  &trans
+&trans  &trans  &kp HOME  &kp PG_DN  &kp END  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT  &trans  &trans
+&trans  &trans  &trans    &trans     &trans   &trans    &trans  &trans    &trans    &trans      &trans     &trans  &trans
+&trans  &trans  &trans    &trans     &trans   &trans    &trans  &trans    &trans    &trans      &trans     &trans
+            >;
+
+            label = "keyboard";
         };
 
         hardware {
