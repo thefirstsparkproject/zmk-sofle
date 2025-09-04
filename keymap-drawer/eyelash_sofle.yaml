@@ -14,7 +14,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -27,8 +27,8 @@ layers:
   - O
   - P
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-esc$$
-  - {t: A, h: LEFT WIN}
+  - $$mdi:keyboard-tab$$
+  - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -38,9 +38,9 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: _, h: RWIN}
+  - '&accent SQT'
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:keyboard-tab$$
+  - LEFT WIN
   - Z
   - X
   - {t: C, h: '&c_cedilla'}
@@ -49,20 +49,20 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&accent SQT'
   - '&accent GRAVE'
   - '&accent CARET'
   - '&accent DOUBLE_QUOTES'
+  - RWIN
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: hub, h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:keyboard-space$$
   - symbols
+  - {t: hub, h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:mouse-left-click-outline$$
   - '&key_repeat'
+  - _
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: hub, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   symbols:
@@ -122,8 +122,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -251,9 +251,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
