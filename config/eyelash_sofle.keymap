@@ -160,6 +160,16 @@
         flavor = "tap-preferred";
     };
 
+    cedilla_trema: cedilla_trema {
+        compatible = "zmk,behavior-hold-tap";
+        label = "CEDILLA_TREMA";
+        bindings = <&accent>, <&accent>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "tap-preferred";
+    };
+
     behaviors {
     };
 
@@ -241,13 +251,6 @@
             bindings = <&kp CAPSLOCK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "GRAVE_ACCENT";
         };
-
-        c_cedilla: c_cedilla {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&accent COMMA &kp C>;
-            label = "C_CEDILLA";
-        };
     };
 
     keymap {
@@ -255,10 +258,10 @@
 
         base_layer {
             bindings = <
-&trans        &trans  &sl 3                     &kp ESCAPE             &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &kp DELETE             &to 0                 &trans                 &trans
-&trans        &kp Q   &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                  &trans
-&kp TAB       &kp A   &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &accent SQT            &kp ENTER
-&kp LEFT_WIN  &kp Z   &kp X                     &tap_hold_c 0 C        &kp V                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &accent GRAVE          &accent CARET         &accent DOUBLE_QUOTES  &kp RWIN
+&trans        &trans  &sl 3                     &kp ESCAPE             &trans                  &trans       &mmv MOVE_UP     &trans         &trans                 &kp DELETE             &to 0                 &trans                              &trans
+&trans        &kp Q   &kp W                     &kp E                  &kp R                   &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                  &kp I                  &kp O                 &kp P                               &trans
+&kp TAB       &kp A   &home_row_mod LEFT_ALT S  &home_row_mod LCTRL D  &home_row_mod LSHIFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHFT J  &home_row_mod RCTRL K  &home_row_mod RALT L  &cedilla_trema DOUBLE_QUOTES COMMA  &kp ENTER
+&kp LEFT_WIN  &kp Z   &kp X                     &kp C                  &kp V                   &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                  &accent SINGLE_QUOTE   &accent GRAVE         &accent CARET                       &kp RWIN
 &kp C_MUTE    &trans  &trans                    &trans                 &mo 1                   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &kp UNDERSCORE         &key_repeat            &trans                &trans
             >;
 
