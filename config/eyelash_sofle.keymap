@@ -150,16 +150,6 @@
         bindings = <&sl_or_mo 0 0>, <&to 0>;
     };
 
-    tap_hold_c: tap_hold_c {
-        compatible = "zmk,behavior-hold-tap";
-        label = "TAP_HOLD_C";
-        bindings = <&c_cedilla>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        flavor = "tap-preferred";
-    };
-
     cedilla_trema: cedilla_trema {
         compatible = "zmk,behavior-hold-tap";
         label = "CEDILLA_TREMA";
