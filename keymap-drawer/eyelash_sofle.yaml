@@ -86,11 +86,11 @@ layers:
   - {t: $, h: ^}
   - {t: '&', h: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '{', h: '['}
+  - {t: '$$mdi:transfer$$', type: trans}
   - (
   - )
+  - {t: '{', h: '['}
   - {t: '}', h: ']'}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '1'
@@ -112,9 +112,9 @@ layers:
   - {t: <, h: '>'}
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '"', h: ''''}
-  - {t: '"', h: ''''}
-  - {t: ;, h: ',', s: ':'}
+  - {t: ',', h: ;, s: <}
   - {t: ., h: ':'}
   - {t: '!', h: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
