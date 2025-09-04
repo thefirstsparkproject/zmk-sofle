@@ -38,20 +38,20 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - '&accent SQT'
+  - {t: '&accent COMMA', h: '&accent DOUBLE_QUOTES'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - LEFT WIN
   - Z
   - X
-  - {t: C, h: '&c_cedilla'}
+  - C
   - V
   - B
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - N
   - M
+  - '&accent SINGLE_QUOTE'
   - '&accent GRAVE'
   - '&accent CARET'
-  - '&accent DOUBLE_QUOTES'
   - RWIN
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
