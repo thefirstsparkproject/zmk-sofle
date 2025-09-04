@@ -80,11 +80,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: /, h: '%', s: '?'}
-  - {t: '*', h: \}
-  - {t: '-', h: +, s: _}
-  - {t: <, h: '>'}
-  - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', h: '~', s: '~'}
+  - {t: '#', h: '@'}
+  - {t: $, h: ^}
+  - {t: '&', h: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '{', h: '['}
   - (
@@ -106,11 +106,11 @@ layers:
   - {t: '0', h: LWIN, s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', h: '~', s: '~'}
-  - {t: '#', h: '@'}
-  - {t: $, h: ^}
-  - {t: '&', h: '|'}
+  - {t: /, h: '%', s: '?'}
+  - {t: '*', h: \}
+  - {t: '-', h: +, s: _}
+  - {t: <, h: '>'}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '"', h: ''''}
   - {t: ',', h: ;, s: <}
