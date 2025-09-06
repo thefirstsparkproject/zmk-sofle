@@ -616,5 +616,5 @@ combos:
 - p: [34, 35, 36]
   k: {t: 'AltGr+Ctl+$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   l: [sticky_mod]
-- p: [42, 29]
-  k: '&key_repeat'
+- p: [29, 28]
+  k: $$mdi:keyboard-esc$$
