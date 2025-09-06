@@ -170,21 +170,6 @@
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
         };
-
-        combo_T {
-            bindings = <&kp LS(T)>;
-            key-positions = <34 35 36>;
-        };
-
-        combo_E {
-            bindings = <&kp E>;
-            key-positions = <35 34>;
-        };
-
-        combo_S {
-            bindings = <&kp LS(S)>;
-            key-positions = <35 36>;
-        };
     };
 
     macros {
@@ -264,10 +249,10 @@
         base_layer {
             bindings = <
 &trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans    &trans
-&kp ESCAPE  &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &kp DELETE
-&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT N  &home_row_mod RCTRL E  &home_row_mod LALT I  &kp LWIN  &kp ENTER
-&trans      &kp Z                 &kp X                 &kp C                  &kp D                  &kp V        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &trans
-&kp C_MUTE  &trans                &trans                &kp UNDERSCORE         &mo 1                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 4                   &key_repeat            &mo 5                 &trans
+&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &trans
+&kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp DELETE
+&kp TAB     &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &kp ENTER
+&kp C_MUTE  &trans                &trans                &trans                 &mo 1                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 4                   &key_repeat            &mo 5                 &trans
             >;
 
             display-name = "base_layer";
@@ -286,11 +271,11 @@
 
         symbols {
             bindings = <
-&trans         &trans        &trans         &trans         &trans        &trans          &trans  &trans        &trans        &trans      &trans         &trans         &trans
-&trans         &kp LS(AT)    &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)  &kp LS(AMPS)    &trans  &kp LSHFT     &kp EQUAL     &kp LS(LT)  &kp LS(GT)     &kp LS(TILDE)  &trans
-&kp LS(QMARK)  &kp LS(EXCL)  &kp LS(COLON)  &kp DOT        &kp COMMA     &kp SEMI        &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp LBKT    &kp RBKT       &kp LS(LBRC)   &kp LS(RBRC)
-&kp LS(PRCNT)  &kp BSLH      &kp FSLH       &kp LS(STAR)   &kp MINUS     &kp LS(PLUS)    &trans  &kp GRAVE     &kp LS(DQT)   &kp SQT     &kp LS(CARET)  &kp LS(DLLR)   &trans
-&trans         &trans        &trans         &trans         &trans        &trans          &trans  &trans        &trans        &trans      &trans         &trans
+&trans  &trans        &trans       &trans     &trans     &trans       &trans  &trans            &trans             &trans            &trans           &trans            &trans
+&trans  &trans        &kp AT_SIGN  &kp POUND  &kp PIPE   &kp AMPS     &trans  &kp EXCLAMATION   &kp LESS_THAN      &kp GREATER_THAN  &kp TILDE        &kp BACKSLASH     &trans
+&trans  &kp QUESTION  &kp COLON    &kp DOT    &kp COMMA  &kp SEMI     &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &kp PERCENT   &kp FSLH     &kp STAR   &kp MINUS  &kp PLUS     &trans  &kp GRAVE         &kp DOUBLE_QUOTES  &kp SQT           &kp CARET        &kp DOLLAR        &trans
+&trans  &trans        &trans       &trans     &trans     &kp EQUAL    &trans  &kp EQUAL         &trans             &trans            &trans           &trans
             >;
 
             label = "symbols";
