@@ -263,11 +263,11 @@
 
         base_layer {
             bindings = <
-&trans      &trans                &sl 3                 &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &to 0                 &trans                         &trans
-&kp ESCAPE  &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                          &kp DELETE
-&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT N  &home_row_mod RCTRL E  &home_row_mod LALT I  &home_row_mod LWIN UNDERSCORE  &kp ENTER
-&trans      &kp Z                 &kp X                 &kp C                  &kp D                  &kp V        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp DOT               &kp FSLH                       &trans
-&kp C_MUTE  &trans                &trans                &kp UNDERSCORE         &mo 2                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 5                   &key_repeat            &trans                &trans
+&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &to 0                 &trans    &trans
+&kp ESCAPE  &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &kp DELETE
+&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT N  &home_row_mod RCTRL E  &home_row_mod LALT I  &kp LWIN  &kp ENTER
+&trans      &kp Z                 &kp X                 &kp C                  &kp D                  &kp V        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &trans
+&kp C_MUTE  &trans                &trans                &kp UNDERSCORE         &mo 1                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 4                   &key_repeat            &mo 5                 &trans
             >;
 
             display-name = "base_layer";
@@ -286,38 +286,26 @@
 
         symbols {
             bindings = <
-&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans  &trans                                   &trans                        &trans                                &trans                                  &trans
-&trans  &trans                      &tap_hold_kp TILDE GRAVE     &tap_hold_kp AT_SIGN HASH  &tap_hold_kp CARET DOLLAR            &tap_hold_kp PIPE AMPERSAND    &trans  &trans  &kp LEFT_PARENTHESIS                     &kp RIGHT_PARENTHESIS         &tap_hold_kp LEFT_BRACKET LEFT_BRACE  &tap_hold_kp RIGHT_BRACKET RIGHT_BRACE  &trans
-&trans  &kp NUMBER_1                &home_row_mod LEFT_ALT N2    &home_row_mod LCTRL N3     &home_row_mod LSHFT N4               &kp N5                         &trans  &kp N6  &home_row_mod RSHFT N7                   &home_row_mod RCTRL N8        &home_row_mod LEFT_ALT N9             &kp N0                                  &trans
-&trans  &tap_hold_kp PERCENT SLASH  &tap_hold_kp BACKSLASH STAR  &tap_hold_kp PLUS MINUS    &tap_hold_kp GREATER_THAN LESS_THAN  &kp EQUAL                      &trans  &trans  &tap_hold_kp SINGLE_QUOTE DOUBLE_QUOTES  &tap_hold_kp SEMICOLON COMMA  &tap_hold_kp COLON PERIOD             &tap_hold_kp QUESTION EXCLAMATION       &trans
-&trans  &trans                      &trans                       &trans                     &trans                               &trans                         &trans  &trans  &trans                                   &trans                        &trans                                &trans
+&trans         &trans        &trans         &trans         &trans        &trans          &trans  &trans        &trans        &trans      &trans         &trans         &trans
+&trans         &kp LS(AT)    &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)  &kp LS(AMPS)    &trans  &kp LSHFT     &kp EQUAL     &kp LS(LT)  &kp LS(GT)     &kp LS(TILDE)  &trans
+&kp LS(QMARK)  &kp LS(EXCL)  &kp LS(COLON)  &kp DOT        &kp COMMA     &kp SEMI        &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp LBKT    &kp RBKT       &kp LS(LBRC)   &kp LS(RBRC)
+&kp LS(PRCNT)  &kp BSLH      &kp FSLH       &kp LS(STAR)   &kp MINUS     &kp LS(PLUS)    &trans  &kp GRAVE     &kp LS(DQT)   &kp SQT     &kp LS(CARET)  &kp LS(DLLR)   &trans
+&trans         &trans        &trans         &trans         &trans        &trans          &trans  &trans        &trans        &trans      &trans         &trans
             >;
 
             label = "symbols";
         };
 
-        hub {
+        accent {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &to 4   &trans    &trans  &to 7   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &accent COMMA  &accent COMMA  &accent CARET  &accent SQT  &accent GRAVE    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "hub";
-        };
-
-        fn {
-            bindings = <
-&trans  &trans  &trans                     &trans                  &trans                       &trans    &trans  &trans  &trans                    &trans                   &trans                  &trans   &trans
-&trans  &kp F1  &kp F2                     &kp F3                  &kp F4                       &trans    &trans  &trans  &kp F13                   &kp F14                  &kp F15                 &kp F16  &trans
-&trans  &kp F5  &home_row_mod LEFT_ALT F6  &home_row_mod LCTRL F7  &home_row_mod LEFT_SHIFT F8  &trans    &trans  &trans  &home_row_mod RSHIFT F17  &home_row_mod RCTRL F18  &home_row_mod RALT F19  &kp F20  &trans
-&trans  &kp F9  &kp F10                    &kp F11                 &kp F12                      &trans    &trans  &trans  &kp F21                   &kp F22                  &kp F23                 &kp F24  &trans
-&trans  &trans  &trans                     &trans                  &trans                       &trans    &trans  &trans  &trans                    &trans                   &trans                  &trans
-            >;
-
-            label = "fn";
+            label = "accent";
         };
 
         mouse {
@@ -332,18 +320,6 @@
             label = "mouse";
         };
 
-        keyboard {
-            bindings = <
-&trans  &trans  &trans    &trans     &trans   &trans    &trans  &trans    &trans    &trans      &trans     &trans  &trans
-&trans  &trans  &trans    &kp PG_UP  &trans   &trans    &trans  &trans    &trans    &kp INSERT  &trans     &trans  &trans
-&trans  &trans  &kp HOME  &kp PG_DN  &kp END  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT  &trans  &trans
-&trans  &trans  &trans    &trans     &trans   &trans    &trans  &trans    &trans    &trans      &trans     &trans  &trans
-&trans  &trans  &trans    &trans     &trans   &trans    &trans  &trans    &trans    &trans      &trans     &trans
-            >;
-
-            label = "keyboard";
-        };
-
         hardware {
             bindings = <
 &bootloader  &soft_off     &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none   &sys_reset  &soft_off  &bootloader
@@ -354,26 +330,6 @@
             >;
 
             display-name = "hardware";
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
