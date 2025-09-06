@@ -271,11 +271,11 @@
 
         symbols {
             bindings = <
-&trans        &trans           &trans       &trans     &trans     &trans       &trans  &trans            &trans             &trans                &trans                 &trans         &trans
-&trans        &kp TILDE        &kp AT_SIGN  &kp POUND  &kp PIPE   &kp AMPS     &trans  &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &trans
-&kp QUESTION  &kp EXCLAMATION  &kp COLON    &kp DOT    &kp COMMA  &kp SEMI     &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &trans
-&trans        &kp PERCENT      &kp FSLH     &kp STAR   &kp MINUS  &kp PLUS     &trans  &kp GRAVE         &kp DOUBLE_QUOTES  &kp SQT               &kp CARET              &kp DOLLAR     &trans
-&trans        &trans           &trans       &trans     &trans     &kp EQUAL    &trans  &kp EQUAL         &trans             &trans                &trans                 &trans
+&trans  &trans        &trans       &trans     &trans           &trans      &trans  &trans            &trans             &trans                &trans                 &trans         &trans
+&trans  &kp TILDE     &kp AT_SIGN  &kp POUND  &kp EXCLAMATION  &kp AMPS    &trans  &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &trans
+&trans  &kp QUESTION  &kp COLON    &kp DOT    &kp COMMA        &kp SEMI    &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &trans
+&trans  &kp PERCENT   &kp FSLH     &kp STAR   &kp MINUS        &kp PLUS    &trans  &kp GRAVE         &kp DOUBLE_QUOTES  &kp SQT               &kp CARET              &kp DOLLAR     &trans
+&trans  &trans        &trans       &trans     &kp EQUAL        &trans      &trans  &trans            &kp EQUAL          &trans                &trans                 &trans
             >;
 
             label = "symbols";
