@@ -145,20 +145,20 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '~'
   - '@'
   - '#'
   - '|'
   - '&'
   - {t: '$$mdi:transfer$$', type: trans}
-  - '!'
   - <
   - '>'
-  - '~'
-  - {t: \, s: '|'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '{'
+  - '}'
+  - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - '?'
+  - '!'
   - ':'
   - {t: ., s: '>'}
   - {t: ',', s: <}
@@ -166,10 +166,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '[', s: '{', type: held alternate}
   - {t: ']', s: '}'}
-  - '{'
-  - '}'
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - (
+  - )
+  - {t: \, s: '|'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '%'
   - {t: /, s: '?'}
