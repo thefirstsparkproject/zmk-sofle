@@ -173,7 +173,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "MOUSE_NUMBERS_DANCE";
         #binding-cells = <0>;
-        bindings = <&mo 0>, <&mo 7>, <&to 7>;
+        bindings = <&mo 8>, <&mo 6>, <&to 6>;
 
         tapping-term-ms = <250>;
     };
