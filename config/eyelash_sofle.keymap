@@ -164,7 +164,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "LEFT_HAND_DANCE";
         #binding-cells = <0>;
-        bindings = <&mo 5>, <&mo 6>;
+        bindings = <&mo 7>, <&mo 4>;
 
         tapping-term-ms = <250>;
     };
@@ -173,7 +173,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "MOUSE_NUMBERS_DANCE";
         #binding-cells = <0>;
-        bindings = <&mo 1>, <&mo 4>;
+        bindings = <&mo 8>, <&mo 3>;
 
         tapping-term-ms = <250>;
     };
@@ -192,59 +192,59 @@
         combo_shift_ctrl_left {
             bindings = <&sk LC(LSHFT)>;
             key-positions = <30 29>;
-            layers = <7>;
+            layers = <5>;
         };
 
         combo_shift_alt_left {
             bindings = <&sk LA(LSHFT)>;
             key-positions = <28 30>;
-            layers = <7>;
+            layers = <5>;
         };
 
         combo_ctrl_alt_left {
             bindings = <&sk LA(LCTRL)>;
             key-positions = <29 28>;
-            layers = <7>;
+            layers = <5>;
         };
 
         combo_shift_ctrl_alt_left {
             bindings = <&sk LC(LA(LSHIFT))>;
             key-positions = <30 29 28>;
-            layers = <7>;
+            layers = <5>;
         };
 
         combo_sl_sticky_mod_left {
-            bindings = <&sl 7>;
+            bindings = <&sl 5>;
             key-positions = <17 16>;
         };
 
         combo_sl_sticky_mod_right {
-            bindings = <&sl 7>;
+            bindings = <&sl 5>;
             key-positions = <21 22>;
         };
 
         combo_shift_ctrl_right {
             bindings = <&sk RC(LSHFT)>;
             key-positions = <34 35>;
-            layers = <7>;
+            layers = <5>;
         };
 
         combo_shift_alt_right {
             bindings = <&sk RA(LSHFT)>;
             key-positions = <34 36>;
-            layers = <7>;
+            layers = <5>;
         };
 
         combo_ctrl_alt_right {
             bindings = <&sk RA(LCTRL)>;
             key-positions = <35 36>;
-            layers = <7>;
+            layers = <5>;
         };
 
         combo_shift_ctrl_alt_right {
             bindings = <&sk RA(RC(LSHIFT))>;
             key-positions = <34 35 36>;
-            layers = <7>;
+            layers = <5>;
         };
     };
 
@@ -327,26 +327,15 @@
 
         base_layer {
             bindings = <
-&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans    &trans
-&to 0       &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 8
-&kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp DELETE
-&kp TAB     &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &kp ENTER
+&trans      &trans                &trans                &to 0                  &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans    &trans
+&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 6
+&kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 1 G      &mmv MOVE_LEFT   &lt 1 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp DELETE
+&kp TAB     &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 2                 &to 3     &kp ENTER
 &kp C_MUTE  &trans                &trans                &left_hand_dance       &mouse_numbers_dance   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mouse_numbers_dance    &key_repeat            &trans                &trans
             >;
 
             display-name = "base_layer";
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
-        };
-
-        numbers_and_fns {
-            label = "numbers_and_fns";
-            bindings = <
-&trans     &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans                 &trans
-&kp F1     &kp F2                 &kp F3                     &kp F4                  &kp F5                       &kp F6     &trans  &kp F13  &kp F14                  &kp F15                 &kp F16                &kp F17                &kp F18
-&kp MINUS  &home_row_mod LWIN N1  &home_row_mod LEFT_ALT N2  &home_row_mod LCTRL N3  &home_row_mod LEFT_SHIFT N4  &kp N5     &trans  &kp N6   &home_row_mod RSHIFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod LWIN N0  &kp PERIOD
-&kp F7     &kp F8                 &kp F9                     &kp F10                 &kp F11                      &kp F12    &trans  &kp F19  &kp F20                  &kp F21                 &kp F22                &kp F23                &kp F24
-&trans     &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans
-            >;
         };
 
         symbols {
@@ -385,18 +374,6 @@
             label = "mouse";
         };
 
-        fold {
-            bindings = <
-&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &kp T   &kp R   &kp E   &kp W   &kp Q   &trans
-&kp DEL    &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &kp G   &kp F   &kp D   &kp S   &kp A   &trans
-&kp ENTER  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &kp B   &kp V   &kp C   &kp X   &kp Z   &trans
-&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "fold";
-        };
-
         left_numpad {
             bindings = <
 &trans  &trans          &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -423,7 +400,7 @@
 
         hardware {
             bindings = <
-&bootloader  &soft_off     &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none   &sys_reset  &soft_off  &bootloader
+&bootloader  &soft_off     &sys_reset    &trans        &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none   &sys_reset  &soft_off  &bootloader
 &none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
 &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none   &none       &none      &none
 &none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
@@ -431,6 +408,29 @@
             >;
 
             display-name = "hardware";
+        };
+
+        fold {
+            bindings = <
+&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &kp T   &kp R   &kp E   &kp W   &kp Q   &trans
+&kp DEL    &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &kp G   &kp F   &kp D   &kp S   &kp A   &trans
+&kp ENTER  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &kp B   &kp V   &kp C   &kp X   &kp Z   &trans
+&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "fold";
+        };
+
+        numbers_and_fns {
+            label = "numbers_and_fns";
+            bindings = <
+&trans     &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans                 &trans
+&kp F1     &kp F2                 &kp F3                     &kp F4                  &kp F5                       &kp F6     &trans  &kp F13  &kp F14                  &kp F15                 &kp F16                &kp F17                &kp F18
+&kp MINUS  &home_row_mod LWIN N1  &home_row_mod LEFT_ALT N2  &home_row_mod LCTRL N3  &home_row_mod LEFT_SHIFT N4  &kp N5     &trans  &kp N6   &home_row_mod RSHIFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod LWIN N0  &kp PERIOD
+&kp F7     &kp F8                 &kp F9                     &kp F10                 &kp F11                      &kp F12    &trans  &kp F19  &kp F20                  &kp F21                 &kp F22                &kp F23                &kp F24
+&trans     &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans
+            >;
         };
     };
 };
