@@ -41,7 +41,7 @@ layers:
   - LWIN
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-tab$$
-  - {t: Z, h: mouse}
+  - Z
   - X
   - C
   - V
@@ -301,7 +301,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&nav_zoom'
   - '&ml_alt'
