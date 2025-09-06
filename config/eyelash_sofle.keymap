@@ -164,7 +164,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "LEFT_HAND_DANCE";
         #binding-cells = <0>;
-        bindings = <&mo 6>, <&mo 7>;
+        bindings = <&mo 5>, <&mo 6>;
 
         tapping-term-ms = <250>;
     };
@@ -192,29 +192,29 @@
         combo_shift_ctrl {
             bindings = <&sk LC(LSHFT)>;
             key-positions = <30 29>;
-            layers = <8>;
+            layers = <7>;
         };
 
         combo_shift_alt {
             bindings = <&sk LA(LSHFT)>;
             key-positions = <28 30>;
-            layers = <8>;
+            layers = <7>;
         };
 
         combo_ctrl_alt {
             bindings = <&sk LA(LCTRL)>;
             key-positions = <29 28>;
-            layers = <8>;
+            layers = <7>;
         };
 
         combo_shift_ctrl_alt {
             bindings = <&sk LC(LA(LSHIFT))>;
             key-positions = <30 29 28>;
-            layers = <8>;
+            layers = <7>;
         };
 
         combo_sl_sticky_mod {
-            bindings = <&sl 8>;
+            bindings = <&sl 7>;
             key-positions = <17 16>;
         };
     };
@@ -299,7 +299,7 @@
         base_layer {
             bindings = <
 &trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans    &trans
-&to 0       &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 5
+&to 0       &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 8
 &kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp DELETE
 &kp TAB     &lt 4 Z               &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &kp ENTER
 &kp C_MUTE  &trans                &trans                &left_hand_dance       &mouse_numbers_dance   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mouse_numbers_dance    &key_repeat            &trans                &trans
@@ -356,25 +356,13 @@
             label = "mouse";
         };
 
-        hardware {
-            bindings = <
-&bootloader  &soft_off     &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none   &sys_reset  &soft_off  &bootloader
-&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none   &none       &none      &none
-&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
-&none        &none         &none         &none         &none         &trans            &none  &none  &none            &trans  &none       &none
-            >;
-
-            display-name = "hardware";
-        };
-
         fold {
             bindings = <
-&trans  &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &kp T   &kp R   &kp E   &kp W   &kp Q   &trans
-&trans  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &kp G   &kp F   &kp D   &kp S   &kp A   &trans
-&trans  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &kp B   &kp V   &kp C   &kp X   &kp Z   &trans
-&trans  &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &kp T   &kp R   &kp E   &kp W   &kp Q   &trans
+&kp DEL    &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &kp G   &kp F   &kp D   &kp S   &kp A   &trans
+&kp ENTER  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &kp B   &kp V   &kp C   &kp X   &kp Z   &trans
+&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "fold";
@@ -402,6 +390,18 @@
             >;
 
             label = "sticky_mod";
+        };
+
+        hardware {
+            bindings = <
+&bootloader  &soft_off     &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none   &sys_reset  &soft_off  &bootloader
+&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
+&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none   &none       &none      &none
+&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
+&none        &none         &none         &none         &none         &trans            &none  &none  &none            &trans  &none       &none
+            >;
+
+            display-name = "hardware";
         };
     };
 };
