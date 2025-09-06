@@ -263,7 +263,7 @@
 
         base_layer {
             bindings = <
-&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &to 0                 &trans    &trans
+&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans    &trans
 &kp ESCAPE  &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &kp DELETE
 &kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT N  &home_row_mod RCTRL E  &home_row_mod LALT I  &kp LWIN  &kp ENTER
 &trans      &kp Z                 &kp X                 &kp C                  &kp D                  &kp V        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &trans
