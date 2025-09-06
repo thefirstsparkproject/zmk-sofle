@@ -170,6 +170,21 @@
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
         };
+
+        combo_T {
+            bindings = <&kp LS(T)>;
+            key-positions = <34 35 36>;
+        };
+
+        combo_E {
+            bindings = <&kp E>;
+            key-positions = <35 34>;
+        };
+
+        combo_S {
+            bindings = <&kp LS(S)>;
+            key-positions = <35 36>;
+        };
     };
 
     macros {
@@ -248,14 +263,25 @@
 
         base_layer {
             bindings = <
-&trans      &trans             &sl 2              &trans             &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans             &to 0              &trans             &trans
-&kp ESCAPE  &kp Q              &kp W              &kp F              &kp P                  &kp B        &mmv MOVE_DOWN   &kp J          &kp L                   &kp U              &kp Y              &kp SEMI           &kp DELETE
-&kp TAB     &home_row_mod A A  &home_row_mod R R  &home_row_mod S S  &home_row_mod LSHFT T  &kp G        &mmv MOVE_LEFT   &kp M          &home_row_mod RSHIFT N  &home_row_mod E E  &home_row_mod I I  &home_row_mod O O  &kp ENTER
-&trans      &kp Z              &kp X              &kp C              &kp D                  &kp V        &mmv MOVE_RIGHT  &kp K          &kp H                   &kp COMMA          &kp DOT            &kp FSLH           &trans
-&kp C_MUTE  &trans             &trans             &kp UNDERSCORE     &mo 1                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 4                   &key_repeat        &trans             &trans
+&trans      &trans                &sl 3                 &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &to 0                 &trans                         &trans
+&kp ESCAPE  &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                          &kp DELETE
+&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT N  &home_row_mod RCTRL E  &home_row_mod LALT I  &home_row_mod LWIN UNDERSCORE  &kp ENTER
+&trans      &kp Z                 &kp X                 &kp C                  &kp D                  &kp V        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp DOT               &kp FSLH                       &trans
+&kp C_MUTE  &trans                &trans                &kp UNDERSCORE         &mo 2                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 5                   &key_repeat            &trans                &trans
             >;
 
             display-name = "base_layer";
+        };
+
+        numbers_and_fns {
+            label = "numbers_and_fns";
+            bindings = <
+&trans  &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans                 &trans
+&trans  &kp F1                 &kp F2                     &kp F3                  &kp F4                       &kp F5     &trans  &kp F6   &kp F7                   &kp F8                  &kp F9                 &kp F10                &trans
+&trans  &home_row_mod LWIN N1  &home_row_mod LEFT_ALT N2  &home_row_mod LCTRL N3  &home_row_mod LEFT_SHIFT N4  &kp N5     &trans  &kp N6   &home_row_mod RSHIFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod LWIN N0  &trans
+&trans  &kp F11                &kp F12                    &kp F13                 &kp F14                      &kp F15    &trans  &kp F16  &kp F17                  &kp F18                 &kp F19                &kp F20                &trans
+&trans  &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans
+            >;
         };
 
         symbols {
@@ -274,7 +300,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &to 3   &trans    &trans  &to 6   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &to 4   &trans    &trans  &to 7   &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
@@ -328,6 +354,26 @@
             >;
 
             display-name = "hardware";
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
