@@ -247,9 +247,9 @@
             layers = <4>;
         };
 
-        combo_repeat {
-            bindings = <&key_repeat>;
-            key-positions = <42 29>;
+        combo_escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <29 28>;
         };
     };
 
