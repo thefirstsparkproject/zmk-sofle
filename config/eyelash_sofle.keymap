@@ -160,6 +160,13 @@
         flavor = "tap-preferred";
     };
 
+    layer_dance: layer_dance {
+        compatible = "zmk,behavior-tap-dance";
+        label = "LAYER_DANCE";
+        #binding-cells = <0>;
+        bindings = <&mo 6>, <&mo 7>;
+    };
+
     behaviors {
     };
 
@@ -169,6 +176,35 @@
         softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
+        };
+
+        combo_shift_ctrl {
+            bindings = <&sk LC(LSHFT)>;
+            key-positions = <30 29>;
+            layers = <8>;
+        };
+
+        combo_shift_alt {
+            bindings = <&sk LA(LSHFT)>;
+            key-positions = <28 30>;
+            layers = <8>;
+        };
+
+        combo_ctrl_alt {
+            bindings = <&sk LA(LCTRL)>;
+            key-positions = <29 28>;
+            layers = <8>;
+        };
+
+        combo_shift_ctrl_alt {
+            bindings = <&sk LC(LA(LSHIFT))>;
+            key-positions = <30 29 28>;
+            layers = <8>;
+        };
+
+        combo_sl_sticky_mod {
+            bindings = <&sl 8>;
+            key-positions = <17 16>;
         };
     };
 
@@ -205,6 +241,7 @@
             bindings =
                 <&macro_press>,
                 <&kp LSHFT &mkp LCLK>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mkp LCLK &kp LSHFT>;
 
@@ -217,6 +254,7 @@
             bindings =
                 <&macro_press>,
                 <&kp LCTRL &mkp LCLK>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mkp LCLK &kp LCTRL>;
 
@@ -229,8 +267,9 @@
             bindings =
                 <&macro_press>,
                 <&kp LALT &mkp LCLK>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mkp LCLK &kp LCTRL>;
+                <&mkp LCLK &kp LALT>;
 
             label = "ML_ALT";
         };
@@ -249,10 +288,10 @@
         base_layer {
             bindings = <
 &trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans    &trans
-&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &trans
+&to 0       &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 5
 &kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp DELETE
-&kp TAB     &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &kp ENTER
-&kp C_MUTE  &trans                &trans                &trans                 &mo 1                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 4                   &key_repeat            &mo 5                 &trans
+&kp TAB     &lt 4 Z               &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &kp ENTER
+&kp C_MUTE  &trans                &trans                &layer_dance           &mo 1                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 1                   &key_repeat            &trans                &trans
             >;
 
             display-name = "base_layer";
@@ -262,11 +301,11 @@
         numbers_and_fns {
             label = "numbers_and_fns";
             bindings = <
-&trans  &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans                 &trans
-&trans  &kp F1                 &kp F2                     &kp F3                  &kp F4                       &kp F5     &trans  &kp F6   &kp F7                   &kp F8                  &kp F9                 &kp F10                &trans
-&trans  &home_row_mod LWIN N1  &home_row_mod LEFT_ALT N2  &home_row_mod LCTRL N3  &home_row_mod LEFT_SHIFT N4  &kp N5     &trans  &kp N6   &home_row_mod RSHIFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod LWIN N0  &trans
-&trans  &kp F11                &kp F12                    &kp F13                 &kp F14                      &kp F15    &trans  &kp F16  &kp F17                  &kp F18                 &kp F19                &kp F20                &trans
-&trans  &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans
+&trans     &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans                 &trans
+&kp F1     &kp F2                 &kp F3                     &kp F4                  &kp F5                       &kp F6     &trans  &kp F13  &kp F14                  &kp F15                 &kp F16                &kp F17                &kp F18
+&kp MINUS  &home_row_mod LWIN N1  &home_row_mod LEFT_ALT N2  &home_row_mod LCTRL N3  &home_row_mod LEFT_SHIFT N4  &kp N5     &trans  &kp N6   &home_row_mod RSHIFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod LWIN N0  &kp PERIOD
+&kp F7     &kp F8                 &kp F9                     &kp F10                 &kp F11                      &kp F12    &trans  &kp F19  &kp F20                  &kp F21                 &kp F22                &kp F23                &kp F24
+&trans     &trans                 &trans                     &trans                  &trans                       &trans     &trans  &trans   &trans                   &trans                  &trans                 &trans
             >;
         };
 
@@ -296,11 +335,11 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &kp DEL    &kp END    &kp HOME   &trans    &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans     &nav_pan   &ml_shift  &trans      &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &ml_ctrl    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans     &nav_zoom  &ml_alt    &trans      &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans          &trans          &trans        &trans           &trans
             >;
 
             label = "mouse";
@@ -316,6 +355,42 @@
             >;
 
             display-name = "hardware";
+        };
+
+        fold {
+            bindings = <
+&trans  &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &kp T   &kp R   &kp E   &kp W   &kp Q   &trans
+&trans  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &kp G   &kp F   &kp D   &kp S   &kp A   &trans
+&trans  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &kp B   &kp V   &kp C   &kp X   &kp Z   &trans
+&trans  &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "fold";
+        };
+
+        left_numpad {
+            bindings = <
+&trans  &trans          &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMLOCK  &kp N7  &kp N8  &kp N9  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp DOT         &kp N4  &kp N5  &kp N6  &kp MINUS    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0          &kp N1  &kp N2  &kp N3  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "left_numpad";
+        };
+
+        sticky_mod {
+            bindings = <
+&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "sticky_mod";
         };
     };
 };
