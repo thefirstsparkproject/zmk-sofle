@@ -189,33 +189,62 @@
             key-positions = <14 28 40>;
         };
 
-        combo_shift_ctrl {
+        combo_shift_ctrl_left {
             bindings = <&sk LC(LSHFT)>;
             key-positions = <30 29>;
             layers = <7>;
         };
 
-        combo_shift_alt {
+        combo_shift_alt_left {
             bindings = <&sk LA(LSHFT)>;
             key-positions = <28 30>;
             layers = <7>;
         };
 
-        combo_ctrl_alt {
+        combo_ctrl_alt_left {
             bindings = <&sk LA(LCTRL)>;
             key-positions = <29 28>;
             layers = <7>;
         };
 
-        combo_shift_ctrl_alt {
+        combo_shift_ctrl_alt_left {
             bindings = <&sk LC(LA(LSHIFT))>;
             key-positions = <30 29 28>;
             layers = <7>;
         };
 
-        combo_sl_sticky_mod {
+        combo_sl_sticky_mod_left {
             bindings = <&sl 7>;
             key-positions = <17 16>;
+        };
+
+        combo_sl_sticky_mod_right {
+            bindings = <&sl 7>;
+            key-positions = <21 22>;
+        };
+
+        combo_shift_ctrl_right {
+            bindings = <&sk RC(LSHFT)>;
+            key-positions = <34 35>;
+            layers = <7>;
+        };
+
+        combo_shift_alt_right {
+            bindings = <&sk RA(LSHFT)>;
+            key-positions = <34 36>;
+            layers = <7>;
+        };
+
+        combo_ctrl_alt_right {
+            bindings = <&sk RA(LCTRL)>;
+            key-positions = <35 36>;
+            layers = <7>;
+        };
+
+        combo_shift_ctrl_alt_right {
+            bindings = <&sk RA(RC(LSHIFT))>;
+            key-positions = <34 35 36>;
+            layers = <7>;
         };
     };
 
@@ -382,11 +411,11 @@
 
         sticky_mod {
             bindings = <
-&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &trans  &trans  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans     &trans     &trans    &trans
             >;
 
             label = "sticky_mod";
