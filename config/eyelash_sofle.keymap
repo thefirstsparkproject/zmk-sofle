@@ -164,7 +164,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "LEFT_HAND_DANCE";
         #binding-cells = <0>;
-        bindings = <&mo 7>, <&mo 4>;
+        bindings = <&mo 5>, <&mo 3>;
 
         tapping-term-ms = <250>;
     };
@@ -173,7 +173,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "MOUSE_NUMBERS_DANCE";
         #binding-cells = <0>;
-        bindings = <&mo 8>, <&mo 3>;
+        bindings = <&mo 0>, <&mo 7>, <&to 7>;
 
         tapping-term-ms = <250>;
     };
@@ -192,59 +192,59 @@
         combo_shift_ctrl_left {
             bindings = <&sk LC(LSHFT)>;
             key-positions = <30 29>;
-            layers = <5>;
+            layers = <4>;
         };
 
         combo_shift_alt_left {
             bindings = <&sk LA(LSHFT)>;
             key-positions = <28 30>;
-            layers = <5>;
+            layers = <4>;
         };
 
         combo_ctrl_alt_left {
             bindings = <&sk LA(LCTRL)>;
             key-positions = <29 28>;
-            layers = <5>;
+            layers = <4>;
         };
 
         combo_shift_ctrl_alt_left {
             bindings = <&sk LC(LA(LSHIFT))>;
             key-positions = <30 29 28>;
-            layers = <5>;
+            layers = <4>;
         };
 
         combo_sl_sticky_mod_left {
-            bindings = <&sl 5>;
+            bindings = <&sl 4>;
             key-positions = <17 16>;
         };
 
         combo_sl_sticky_mod_right {
-            bindings = <&sl 5>;
+            bindings = <&sl 4>;
             key-positions = <21 22>;
         };
 
         combo_shift_ctrl_right {
             bindings = <&sk RC(LSHFT)>;
             key-positions = <34 35>;
-            layers = <5>;
+            layers = <4>;
         };
 
         combo_shift_alt_right {
             bindings = <&sk RA(LSHFT)>;
             key-positions = <34 36>;
-            layers = <5>;
+            layers = <4>;
         };
 
         combo_ctrl_alt_right {
             bindings = <&sk RA(LCTRL)>;
             key-positions = <35 36>;
-            layers = <5>;
+            layers = <4>;
         };
 
         combo_shift_ctrl_alt_right {
             bindings = <&sk RA(RC(LSHIFT))>;
             key-positions = <34 35 36>;
-            layers = <5>;
+            layers = <4>;
         };
     };
 
@@ -328,9 +328,9 @@
         base_layer {
             bindings = <
 &trans      &trans                &trans                &to 0                  &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans    &trans
-&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 6
-&kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 1 G      &mmv MOVE_LEFT   &lt 1 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp DELETE
-&kp TAB     &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 2                 &to 3     &kp ENTER
+&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 8
+&kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 1 G      &mmv MOVE_LEFT   &lt 1 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp ENTER
+&kp TAB     &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 2                 &to 7     &kp DEL
 &kp C_MUTE  &trans                &trans                &left_hand_dance       &mouse_numbers_dance   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mouse_numbers_dance    &key_repeat            &trans                &trans
             >;
 
@@ -362,18 +362,6 @@
             label = "accent";
         };
 
-        mouse {
-            bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans     &nav_pan   &ml_shift  &trans      &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &ml_ctrl    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans     &nav_zoom  &ml_alt    &trans      &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans          &trans          &trans        &trans           &trans
-            >;
-
-            label = "mouse";
-        };
-
         left_numpad {
             bindings = <
 &trans  &trans          &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -398,28 +386,40 @@
             label = "sticky_mod";
         };
 
-        hardware {
-            bindings = <
-&bootloader  &soft_off     &sys_reset    &trans        &bt BT_CLR    &bt BT_CLR_ALL    &none  &none  &none            &none   &sys_reset  &soft_off  &bootloader
-&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none  &rgb_ug RGB_TOG  &none   &none       &none      &none
-&none        &none         &none         &none         &none         &none             &none  &none  &none            &none   &none       &none      &none
-&none        &none         &none         &none         &none         &trans            &none  &none  &none            &trans  &none       &none
-            >;
-
-            display-name = "hardware";
-        };
-
         fold {
             bindings = <
-&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &kp T   &kp R   &kp E   &kp W   &kp Q   &trans
-&kp DEL    &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &kp G   &kp F   &kp D   &kp S   &kp A   &trans
-&kp ENTER  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &kp B   &kp V   &kp C   &kp X   &kp Z   &trans
-&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &kp T   &kp R   &kp E   &kp W   &kp Q   &trans
+&trans  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &kp G   &kp F   &kp D   &kp S   &kp A   &trans
+&trans  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &kp B   &kp V   &kp C   &kp X   &kp Z   &trans
+&trans  &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "fold";
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans     &nav_pan   &ml_shift  &trans      &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &ml_ctrl    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans     &nav_zoom  &ml_alt    &trans      &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &to 0       &trans  &to 0           &trans          &trans        &trans           &trans
+            >;
+
+            label = "mouse";
+        };
+
+        hardware {
+            bindings = <
+&bootloader  &soft_off     &sys_reset    &trans        &bt BT_CLR    &bt BT_CLR_ALL    &none  &none   &none            &none   &sys_reset  &soft_off  &bootloader
+&none        &none         &none         &none         &none         &none             &none  &none   &none            &none   &none       &none      &none
+&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none  &none   &rgb_ug RGB_TOG  &none   &none       &none      &none
+&none        &none         &none         &none         &none         &none             &none  &none   &none            &none   &none       &none      &none
+&none        &none         &none         &none         &none         &trans            &none  &trans  &none            &trans  &none       &none
+            >;
+
+            display-name = "hardware";
         };
 
         numbers_and_fns {
