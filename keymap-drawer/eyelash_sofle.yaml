@@ -26,7 +26,7 @@ layers:
   - I
   - O
   - P
-  - {t: numbers_and_fns, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-esc$$
   - {t: A, h: LWIN}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -51,7 +51,7 @@ layers:
   - M
   - _
   - {t: accent, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: hardware, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -64,7 +64,7 @@ layers:
   - '&mouse_numbers_dance'
   - '&key_repeat'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: hardware, h: toggle}
   symbols:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
