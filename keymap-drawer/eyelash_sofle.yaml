@@ -87,22 +87,22 @@ layers:
   - '&'
   - {t: '$$mdi:transfer$$', type: trans}
   - <
-  - '>'
+  - (
   - '{'
-  - '}'
+  - {t: '[', s: '{'}
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '?'
-  - ':'
-  - {t: ., s: '>'}
-  - {t: ',', s: <}
-  - {t: ;, s: ':', type: held}
+  - {t: '`', s: '~'}
+  - {t: '''', s: '"'}
+  - Sft+"
+  - Sft+$
+  - {t: Sft+^, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '[', s: '{', type: held alternate}
-  - {t: ']', s: '}'}
-  - (
+  - {t: '>', type: held alternate}
   - )
+  - '}'
+  - {t: ']', s: '}'}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -112,12 +112,12 @@ layers:
   - {t: '-', s: _}
   - +
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
-  - '"'
-  - {t: '''', s: '"'}
-  - ^
-  - $
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ;, s: ':'}
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - ':'
+  - '!'
+  - '?'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
