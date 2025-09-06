@@ -160,11 +160,22 @@
         flavor = "tap-preferred";
     };
 
-    layer_dance: layer_dance {
+    left_hand_dance: left_hand_dance {
         compatible = "zmk,behavior-tap-dance";
-        label = "LAYER_DANCE";
+        label = "LEFT_HAND_DANCE";
         #binding-cells = <0>;
         bindings = <&mo 6>, <&mo 7>;
+
+        tapping-term-ms = <250>;
+    };
+
+    mouse_numbers_dance: mouse_numbers_dance {
+        compatible = "zmk,behavior-tap-dance";
+        label = "MOUSE_NUMBERS_DANCE";
+        #binding-cells = <0>;
+        bindings = <&mo 1>, <&mo 4>;
+
+        tapping-term-ms = <250>;
     };
 
     behaviors {
@@ -291,7 +302,7 @@
 &to 0       &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P     &to 5
 &kp ESCAPE  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &kp LWIN  &kp DELETE
 &kp TAB     &lt 4 Z               &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp UNDERSCORE         &sl 3                 &trans    &kp ENTER
-&kp C_MUTE  &trans                &trans                &layer_dance           &mo 1                  &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 1                   &key_repeat            &trans                &trans
+&kp C_MUTE  &trans                &trans                &left_hand_dance       &mouse_numbers_dance   &kp SPACE    &mkp LCLK        &kp BACKSPACE  &mo 1                   &key_repeat            &trans                &trans
             >;
 
             display-name = "base_layer";
