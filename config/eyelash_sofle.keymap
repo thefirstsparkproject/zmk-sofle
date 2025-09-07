@@ -327,8 +327,8 @@
         numbers_symbols_fns {
             bindings = <
 &trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
-&kp F11  &kp F1                 &kp F2                 &kp F3                  &kp F4                        &kp F5    &trans  &kp F6  &kp F7                  &kp F8                  &kp F9                 &kp F10                &kp F12
-&trans   &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT NUMBER_4  &kp N5    &trans  &kp N6  &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &trans
+&trans   &kp F1                 &kp F2                 &kp F3                  &kp F4                        &kp F5    &trans  &kp F6  &kp F7                  &kp F8                  &kp F9                 &kp F10                &trans
+&kp F11  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT NUMBER_4  &kp N5    &trans  &kp N6  &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &kp F12
 &trans   &trans                 &trans                 &kp MINUS               &kp EQUAL                     &trans    &trans  &trans  &kp GRAVE               &kp APOS                &kp LBKT               &kp RBKT               &trans
 &trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans
             >;
