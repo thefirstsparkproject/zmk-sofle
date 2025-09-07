@@ -7,7 +7,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -20,7 +20,7 @@ layers:
   - E
   - R
   - T
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - Y
   - U
   - I
@@ -33,7 +33,7 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - H
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
@@ -46,7 +46,7 @@ layers:
   - C
   - V
   - B
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - N
   - M
   - {t: ',', s: <}
@@ -59,10 +59,10 @@ layers:
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', h: nav}
   - {t: '$$mdi:keyboard-space$$', h: numbers_symbols_fns}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB1'
   - {t: '$$mdi:backspace$$', h: numbers_symbols_fns_2}
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-tab$$', h: shortcut}
   - {t: accent, h: '$$mdi:gesture-tap-hold$$'}
   - bt
   numbers_symbols_fns:
@@ -390,24 +390,73 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  shortcut:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Hyper+Q
+  - Hyper+W
+  - Hyper+E
+  - Hyper+R
+  - Hyper+T
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Hyper+Y
+  - Hyper+U
+  - Hyper+I
+  - Hyper+O
+  - Hyper+P
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Hyper+A
+  - Hyper+S
+  - Hyper+D
+  - Hyper+F
+  - Hyper+G
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Hyper+H
+  - {t: Hyper+J, type: held alternate}
+  - {t: Hyper+K, type: held alternate}
+  - Hyper+L
+  - 'Hyper+:'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Hyper+Z
+  - Hyper+X
+  - Hyper+C
+  - Hyper+V
+  - Hyper+B
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Hyper+N
+  - Hyper+M
+  - Hyper+<
+  - Hyper+>
+  - Hyper+?
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
-- p: [30, 29]
-  k: {t: 'Ctl+$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [28, 30]
-  k: {t: 'Alt+$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [29, 28]
-  k: {t: 'Alt+$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [30, 29, 28]
-  k: {t: 'Ctl+Alt+$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
 - p: [34, 35]
-  k: {t: 'Ctl+$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [34, 36]
-  k: {t: 'AltGr+$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [35, 36]
-  k: {t: 'AltGr+$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [34, 35, 36]
-  k: {t: 'AltGr+Ctl+$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [29, 28]
-  k: $$mdi:keyboard-esc$$
+  k: {t: shortcut, h: '$$mdi:gesture-tap-hold$$'}
