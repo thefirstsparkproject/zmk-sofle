@@ -188,49 +188,9 @@
             key-positions = <14 28 40>;
         };
 
-        combo_shift_ctrl_left {
-            bindings = <&sk LC(LSHFT)>;
-            key-positions = <30 29>;
-        };
-
-        combo_shift_alt_left {
-            bindings = <&sk LA(LSHFT)>;
-            key-positions = <28 30>;
-        };
-
-        combo_ctrl_alt_left {
-            bindings = <&sk LA(LCTRL)>;
-            key-positions = <29 28>;
-        };
-
-        combo_shift_ctrl_alt_left {
-            bindings = <&sk LC(LA(LSHIFT))>;
-            key-positions = <30 29 28>;
-        };
-
-        combo_shift_ctrl_right {
-            bindings = <&sk RC(LSHFT)>;
+        combo_shortcut {
+            bindings = <&sl 6>;
             key-positions = <34 35>;
-        };
-
-        combo_shift_alt_right {
-            bindings = <&sk RA(LSHFT)>;
-            key-positions = <34 36>;
-        };
-
-        combo_ctrl_alt_right {
-            bindings = <&sk RA(LCTRL)>;
-            key-positions = <35 36>;
-        };
-
-        combo_shift_ctrl_alt_right {
-            bindings = <&sk RA(RC(LSHIFT))>;
-            key-positions = <34 35 36>;
-        };
-
-        combo_escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <29 28>;
         };
     };
 
@@ -313,11 +273,11 @@
 
         base_layer {
             bindings = <
-&trans      &trans                &trans                &trans                 &trans                 &trans         &trans  &trans           &trans                  &trans                 &trans                &trans                        &trans
-&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T          &trans  &kp Y            &kp U                   &kp I                  &kp O                 &kp P                         &trans
-&trans      &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G          &trans  &kp H            &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &trans
-&trans      &kp Z                 &kp X                 &kp C                  &kp V                  &kp B          &trans  &kp N            &kp M                   &kp COMMA              &kp DOT               &kp FSLH                      &trans
-&kp C_MUTE  &trans                &trans                &kp ESCAPE             &lt 3 ENTER            &lt 1 SPACE    &trans  &lt 2 BACKSPACE  &kp DEL                 &kp TAB                &sl 4                 &mo 5
+&trans      &trans                &trans                &trans                 &trans                 &trans         &mmv MOVE_UP     &trans           &trans                  &trans                 &trans                &trans                        &trans
+&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T          &mmv MOVE_DOWN   &kp Y            &kp U                   &kp I                  &kp O                 &kp P                         &trans
+&trans      &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G          &mmv MOVE_LEFT   &kp H            &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &trans
+&trans      &kp Z                 &kp X                 &kp C                  &kp V                  &kp B          &mmv MOVE_RIGHT  &kp N            &kp M                   &kp COMMA              &kp DOT               &kp FSLH                      &trans
+&kp C_MUTE  &trans                &trans                &kp ESCAPE             &lt 3 ENTER            &lt 1 SPACE    &mkp MB1         &lt 2 BACKSPACE  &kp DEL                 &lt 6 TAB              &sl 4                 &mo 5
             >;
 
             display-name = "base_layer";
@@ -381,6 +341,18 @@
             >;
 
             label = "bt";
+        };
+
+        shortcut {
+            bindings = <
+&trans  &trans                 &trans                 &trans                 &trans                 &trans                   &trans  &trans                 &trans                 &trans                  &trans                  &trans                     &trans
+&trans  &kp LS(LG(LC(LA(Q))))  &kp LS(LG(LC(LA(W))))  &kp LS(LG(LC(LA(E))))  &kp LS(LG(LC(LA(R))))  &kp LS(LG(LC(LA(T))))    &trans  &kp LS(LG(LC(LA(Y))))  &kp LS(LG(LC(LA(U))))  &kp LS(LG(LC(LA(I))))   &kp LS(LG(LC(LA(O))))   &kp LS(LG(LC(LA(P))))      &trans
+&trans  &kp LS(LG(LC(LA(A))))  &kp LS(LG(LC(LA(S))))  &kp LS(LG(LC(LA(D))))  &kp LS(LG(LC(LA(F))))  &kp LS(LG(LC(LA(G))))    &trans  &kp LS(LG(LC(LA(H))))  &kp LS(LG(LC(LA(J))))  &kp LS(LG(LC(LA(K))))   &kp LS(LG(LC(LA(L))))   &kp LS(LG(LC(LA(COLON))))  &trans
+&trans  &kp LS(LG(LC(LA(Z))))  &kp LS(LG(LC(LA(X))))  &kp LS(LG(LC(LA(C))))  &kp LS(LG(LC(LA(V))))  &kp LS(LG(LC(LA(B))))    &trans  &kp LS(LG(LC(LA(N))))  &kp LS(LG(LC(LA(M))))  &kp LS(LG(LC(LA(LT))))  &kp LS(LG(LC(LA(GT))))  &kp LS(LG(LC(LA(QMARK))))  &trans
+&trans  &trans                 &trans                 &trans                 &trans                 &trans                   &trans  &trans                 &trans                 &trans                  &trans                  &trans
+            >;
+
+            label = "shortcut";
         };
     };
 };
