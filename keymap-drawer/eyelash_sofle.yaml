@@ -79,7 +79,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - F11
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
@@ -91,8 +91,8 @@ layers:
   - F8
   - F9
   - F10
-  - F12
   - {t: '$$mdi:transfer$$', type: trans}
+  - F11
   - {t: '1', h: LGUI, s: '!'}
   - {t: '2', h: '$$mdi:apple-keyboard-option$$', s: '@'}
   - {t: '3', h: '$$mdi:apple-keyboard-control$$', s: '#'}
@@ -104,7 +104,7 @@ layers:
   - {t: '8', h: '$$mdi:apple-keyboard-control$$', s: '*'}
   - {t: '9', h: '$$mdi:apple-keyboard-option$$', s: (}
   - {t: '0', h: RGUI, s: )}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
