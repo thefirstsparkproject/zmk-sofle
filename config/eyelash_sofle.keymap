@@ -219,6 +219,11 @@
             bindings = <&kp UNDER>;
             key-positions = <21 22>;
         };
+
+        combo_repeat {
+            bindings = <&key_repeat>;
+            key-positions = <17 18>;
+        };
     };
 
     macros {
