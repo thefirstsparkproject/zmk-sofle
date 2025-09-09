@@ -222,12 +222,47 @@
 
         combo_repeat {
             bindings = <&key_repeat>;
-            key-positions = <17 18>;
+            key-positions = <41 34>;
         };
 
-        combo_test_mo {
-            bindings = <&sl_to_mo 6 6>;
-            key-positions = <54 62>;
+        combo_space {
+            bindings = <&kp SPACE>;
+            key-positions = <30 29>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <29 28>;
+        };
+
+        combo_escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <30 29 28>;
+        };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <34 35>;
+        };
+
+        combo_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <35 36>;
+        };
+
+        combo_ctrl_backspace {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <22 23>;
+        };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <34 35 36>;
+        };
+
+        combo_delete {
+            bindings = <&kp DEL>;
+            key-positions = <48 49>;
         };
     };
 
@@ -327,8 +362,8 @@
 &trans  &trans                 &trans                 &trans                  &trans                  &trans              &trans  &trans            &trans                  &trans                  &trans                 &trans                 &trans
 &trans  &trans                 &kp AT                 &kp HASH                &kp LESS_THAN           &kp GREATER_THAN    &trans  &mt CARET DOLLAR  &mt RPAR LPAR           &mt RBRC LBRC           &mt RBKT LEFT_BRACKET  &trans                 &trans
 &trans  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT N4  &kp N5              &trans  &kp N6            &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &trans
-&trans  &kp TILDE              &kp PERCENT            &kp STAR                &kp MINUS               &kp PLUS            &trans  &kp AMPS          &kp PIPE                &trans                  &trans                 &trans                 &trans
-&trans  &trans                 &trans                 &trans                  &trans                  &trans              &trans  &quote            &kp EQUAL               &trans                  &trans                 &trans
+&trans  &kp TILDE              &kp PERCENT            &kp STAR                &kp MINUS               &kp PLUS            &trans  &mt AMPS PIPE     &quote                  &trans                  &trans                 &trans                 &trans
+&trans  &trans                 &trans                 &trans                  &trans                  &trans              &trans  &kp EQUAL         &trans                  &trans                  &trans                 &trans
             >;
         };
 
