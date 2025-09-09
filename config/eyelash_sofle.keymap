@@ -206,12 +206,12 @@
         };
 
         combo_shortcut {
-            bindings = <&sl 5>;
+            bindings = <&sl 6>;
             key-positions = <43 42>;
         };
 
         combo_accent {
-            bindings = <&sl 3>;
+            bindings = <&sl 4>;
             key-positions = <57 59>;
         };
 
@@ -222,7 +222,7 @@
 
         combo_repeat {
             bindings = <&key_repeat>;
-            key-positions = <41 34>;
+            key-positions = <41 42>;
         };
 
         combo_space {
@@ -237,7 +237,7 @@
 
         combo_escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <30 29 28>;
+            key-positions = <15 16>;
         };
 
         combo_enter {
@@ -333,6 +333,13 @@
             bindings = <&kp CAPSLOCK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "GRAVE_ACCENT";
         };
+
+        macro_accent2: macro_accent2 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&none &macro_param_1to1 &accent MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_ACCENT2";
+        };
     };
 
     keymap {
@@ -340,11 +347,11 @@
 
         base_layer {
             bindings = <
-&trans          &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                  &trans
-&trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                   &trans
-&caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN TAB  &trans
-&trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &comma                 &period               &mt BACKSLASH SLASH     &trans
-&kp C_MUTE      &trans                &key_repeat           &lt 2 ESCAPE           &sl_to_mo 1 1          &kp SPACE    &mkp MB1         &kp BACKSPACE  &kp ENTER               &kp DELETE             &trans                &mo 4
+&trans          &trans                &trans                &trans                 &trans                 &trans           &mmv MOVE_UP     &trans  &trans                  &trans                 &trans                &trans                  &trans
+&trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T            &mmv MOVE_DOWN   &kp Y   &kp U                   &kp I                  &kp O                 &kp P                   &trans
+&caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G            &mmv MOVE_LEFT   &kp H   &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN TAB  &trans
+&trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B            &mmv MOVE_RIGHT  &kp N   &kp M                   &comma                 &period               &mt BACKSLASH SLASH     &trans
+&kp C_MUTE      &trans                &key_repeat           &mo 3                  &mo 2                  &sl_to_mo 1 1    &mkp MB1         &trans  &trans                  &trans                 &trans                &mo 5
             >;
 
             display-name = "base_layer";
@@ -362,16 +369,28 @@
             >;
         };
 
-        nav {
+        mouse {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans     &trans  &trans          &trans          &trans        &trans           &trans      &trans
-&trans  &trans  &trans     &nav_pan   &ml_shift  &trans     &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp INSERT  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &ml_alt    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp HOME    &kp PRINTSCREEN
-&trans  &trans  &trans     &nav_zoom  &ml_ctrl   &trans     &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp END     &trans
-&trans  &trans  &trans     &trans     &trans     &trans     &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans    &trans    &nav_pan   &trans     &trans    &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans    &trans    &nav_zoom  &trans     &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK     &trans           &trans
             >;
 
-            label = "nav";
+            label = "mouse";
+        };
+
+        keyboard {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans    &trans         &trans       &trans     &trans           &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp PRINTSCREEN  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp INSERT       &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans    &trans         &trans       &trans     &trans           &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans    &trans         &trans       &trans     &trans
+            >;
+
+            label = "keyboard";
         };
 
         accent {
@@ -408,16 +427,6 @@
             >;
 
             label = "shortcut";
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp A   &trans    &trans  &trans  &kp B   &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
