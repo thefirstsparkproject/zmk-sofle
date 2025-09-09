@@ -38,7 +38,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: _, h: LWIN}
+  - {t: '$$mdi:keyboard-tab$$', h: LWIN}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Z
@@ -56,13 +56,13 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - '&key_repeat'
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-esc$$', h: numsym}
+  - $$mdi:keyboard-esc$$
+  - {t: numsym, h: numsym}
   - $$mdi:keyboard-space$$
   - '&mkp MB1'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:backspace-reverse-outline$$', h: nav}
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - bt
   numsym:
@@ -360,16 +360,16 @@ layers:
   - Hyper+G
   - {t: '$$mdi:transfer$$', type: trans}
   - Hyper+H
-  - {t: Hyper+J, type: held}
-  - {t: Hyper+K, type: held}
+  - Hyper+J
+  - Hyper+K
   - Hyper+L
   - 'Hyper+:'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Hyper+Z
   - Hyper+X
-  - Hyper+C
-  - Hyper+V
+  - {t: Hyper+C, type: held}
+  - {t: Hyper+V, type: held}
   - Hyper+B
   - {t: '$$mdi:transfer$$', type: trans}
   - Hyper+N
@@ -393,7 +393,9 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
-- p: [34, 35]
+- p: [43, 42]
   k: {t: shortcut, h: '$$mdi:gesture-tap-hold$$'}
 - p: [57, 59]
   k: {t: accent, h: '$$mdi:gesture-tap-hold$$'}
+- p: [21, 22]
+  k: _
