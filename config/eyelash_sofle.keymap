@@ -297,7 +297,7 @@
 &trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T           &mmv MOVE_DOWN   &kp Y      &kp U                   &kp I                  &kp O                 &kp P                          &trans
 &caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G           &mmv MOVE_LEFT   &kp H      &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN UNDERSCORE  &trans
 &trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B           &mmv MOVE_RIGHT  &kp N      &kp M                   &comma                 &period               &mt BACKSLASH SLASH            &trans
-&kp C_MUTE      &trans                &key_repeat           &lt 3 ENTER            &kp SPACE              &lt 2 ESCAPE    &mkp MB1         &lt 2 DEL  &kp BACKSPACE           &kp TAB                &trans                &mo 5
+&kp C_MUTE      &trans                &key_repeat           &kp ENTER              &kp SPACE              &lt 2 ESCAPE    &mkp MB1         &lt 3 DEL  &kp BACKSPACE           &kp TAB                &trans                &mo 5
             >;
 
             display-name = "base_layer";
