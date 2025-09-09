@@ -229,11 +229,11 @@ layers:
   - '&accent SQT'
   - '&accent GRAVE'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
-  - {t: '''', s: '"'}
-  - ^
-  - {t: ',', s: <}
-  - '"'
+  - '&accent GRAVE'
+  - '&accent APOS'
+  - '&accent CARET'
+  - '&accent COMMA'
+  - '&accent DOUBLE_QUOTES'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
