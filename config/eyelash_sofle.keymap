@@ -197,12 +197,12 @@
         };
 
         combo_shortcut {
-            bindings = <&sl 6>;
+            bindings = <&sl 5>;
             key-positions = <34 35>;
         };
 
         combo_accent {
-            bindings = <&sl 4>;
+            bindings = <&sl 3>;
             key-positions = <57 59>;
         };
     };
@@ -297,33 +297,21 @@
 &trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T           &mmv MOVE_DOWN   &kp Y      &kp U                   &kp I                  &kp O                 &kp P                          &trans
 &caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G           &mmv MOVE_LEFT   &kp H      &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN UNDERSCORE  &trans
 &trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B           &mmv MOVE_RIGHT  &kp N      &kp M                   &comma                 &period               &mt BACKSLASH SLASH            &trans
-&kp C_MUTE      &trans                &key_repeat           &kp ENTER              &kp SPACE              &lt 2 ESCAPE    &mkp MB1         &lt 3 DEL  &kp BACKSPACE           &kp TAB                &trans                &mo 5
+&kp C_MUTE      &trans                &key_repeat           &kp ENTER              &kp SPACE              &lt 1 ESCAPE    &mkp MB1         &lt 2 DEL  &kp BACKSPACE           &kp TAB                &trans                &mo 4
             >;
 
             display-name = "base_layer";
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
-        numbers {
+        numsym {
+            label = "numsym";
             bindings = <
-&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
-&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
-&trans  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT NUMBER_4  &kp N5    &trans  &kp N6  &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &trans
-&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
-&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans
-            >;
-
-            label = "numbers";
-        };
-
-        symbols {
-            label = "symbols";
-            bindings = <
-&trans  &trans     &trans       &trans    &trans         &trans              &trans  &trans            &trans         &trans         &trans                 &trans  &trans
-&trans  &trans     &kp AT       &kp HASH  &kp LESS_THAN  &kp GREATER_THAN    &trans  &mt CARET DOLLAR  &mt RPAR LPAR  &mt RBRC LBRC  &mt RBKT LEFT_BRACKET  &trans  &trans
-&trans  &trans     &trans       &trans    &trans         &trans              &trans  &trans            &trans         &trans         &trans                 &trans  &trans
-&trans  &kp TILDE  &kp PERCENT  &kp STAR  &kp MINUS      &kp PLUS            &trans  &kp AMPS          &kp PIPE       &trans         &trans                 &trans  &trans
-&trans  &trans     &trans       &trans    &trans         &trans              &trans  &quote            &kp EQUAL      &trans         &trans                 &trans
+&none  &none                  &none                  &none                   &none                   &none               &none  &none             &none                   &none                   &none                  &none                  &none
+&none  &none                  &kp AT                 &kp HASH                &kp LESS_THAN           &kp GREATER_THAN    &none  &mt CARET DOLLAR  &mt RPAR LPAR           &mt RBRC LBRC           &mt RBKT LEFT_BRACKET  &none                  &none
+&none  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT N4  &kp N5              &none  &kp N6            &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &none
+&none  &kp TILDE              &kp PERCENT            &kp STAR                &kp MINUS               &kp PLUS            &none  &kp AMPS          &kp PIPE                &none                   &none                  &none                  &none
+&none  &none                  &none                  &none                   &none                   &none               &none  &quote            &kp EQUAL               &none                   &none                  &none
             >;
         };
 
