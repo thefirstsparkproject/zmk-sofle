@@ -341,11 +341,11 @@
 
         accent {
             bindings = <
-&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans             &trans
-&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans             &trans
-&trans  &accent DOUBLE_QUOTES  &accent COMMA  &accent CARET  &accent SQT  &accent GRAVE    &trans  &kp GRAVE  &kp APOS  &kp CARET  &kp COMMA  &kp DOUBLE_QUOTES  &trans
-&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans             &trans
-&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans         &trans        &trans         &trans         &trans                 &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans         &trans        &trans         &trans         &trans                 &trans
+&trans  &accent DOUBLE_QUOTES  &accent COMMA  &accent CARET  &accent SQT  &accent GRAVE    &trans  &accent GRAVE  &accent APOS  &accent CARET  &accent COMMA  &accent DOUBLE_QUOTES  &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans         &trans        &trans         &trans         &trans                 &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans         &trans        &trans         &trans         &trans
             >;
 
             label = "accent";
