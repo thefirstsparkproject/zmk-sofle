@@ -224,6 +224,11 @@
             bindings = <&key_repeat>;
             key-positions = <17 18>;
         };
+
+        combo_test_mo {
+            bindings = <&sl_to_mo 6 6>;
+            key-positions = <54 62>;
+        };
     };
 
     macros {
@@ -373,6 +378,16 @@
             >;
 
             label = "shortcut";
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp A   &trans    &trans  &trans  &kp B   &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
