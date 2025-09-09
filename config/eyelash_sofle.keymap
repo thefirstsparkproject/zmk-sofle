@@ -39,7 +39,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "PERIOD";
         #binding-cells = <0>;
-        bindings = <&kp DOT>, <&kp COLON>;
+        bindings = <&mt EXCL PERIOD>, <&mt QUESTION COLON>;
     };
 
     period_plus: period_plus {
@@ -60,7 +60,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "QUOTE";
         #binding-cells = <0>;
-        bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
+        bindings = <&mt GRAVE SQT>, <&kp DOUBLE_QUOTES>;
     };
 
     division: division {
@@ -293,37 +293,37 @@
 
         base_layer {
             bindings = <
-&trans          &trans                &trans                &trans                 &trans                 &trans         &mmv MOVE_UP     &trans     &trans                  &trans                 &trans                &trans                  &trans
-&trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T          &mmv MOVE_DOWN   &kp Y      &kp U                   &kp I                  &kp O                 &kp P                   &trans
-&caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G          &mmv MOVE_LEFT   &kp H      &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN DQT  &trans
-&trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B          &mmv MOVE_RIGHT  &kp N      &kp M                   &kp COMMA              &kp DOT               &kp FSLH                &trans
-&kp C_MUTE      &trans                &trans                &lt 3 ESCAPE           &kp SPACE              &lt 1 ENTER    &mkp MB1         &lt 2 DEL  &kp BACKSPACE           &kp TAB                &trans                &mo 5
+&trans          &trans                &trans                &trans                 &trans                 &trans          &mmv MOVE_UP     &trans     &trans                  &trans                 &trans                &trans                         &trans
+&trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T           &mmv MOVE_DOWN   &kp Y      &kp U                   &kp I                  &kp O                 &kp P                          &trans
+&caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G           &mmv MOVE_LEFT   &kp H      &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN UNDERSCORE  &trans
+&trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B           &mmv MOVE_RIGHT  &kp N      &kp M                   &comma                 &period               &mt BACKSLASH SLASH            &trans
+&kp C_MUTE      &trans                &key_repeat           &lt 3 ENTER            &kp SPACE              &lt 2 ESCAPE    &mkp MB1         &lt 2 DEL  &kp BACKSPACE           &kp TAB                &trans                &mo 5
             >;
 
             display-name = "base_layer";
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
-        numbers_and_fns {
+        numbers {
             bindings = <
-&trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
-&trans   &kp F1                 &kp F2                 &kp F3                  &kp F4                        &kp F5    &trans  &kp F6  &kp F7                  &kp F8                  &kp F9                 &kp F10                &trans
-&kp F11  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT NUMBER_4  &kp N5    &trans  &kp N6  &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &kp F12
-&trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
-&trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans
+&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
+&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
+&trans  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT NUMBER_4  &kp N5    &trans  &kp N6  &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &trans
+&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
+&trans  &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans
             >;
 
-            label = "numbers_and_fns";
+            label = "numbers";
         };
 
         symbols {
             label = "symbols";
             bindings = <
-&trans  &trans     &trans         &trans            &trans          &trans       &trans  &trans    &trans                &trans    &trans        &trans    &trans
-&trans  &trans     &kp AT         &kp HASH          &kp DOLLAR      &kp CARET    &trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp LBRC  &kp QUESTION  &trans    &trans
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp UNDERSCORE  &kp EQUAL    &trans  &kp RBKT  &kp RPAR              &kp RBRC  &kp EXCL      &kp SQT   &trans
-&trans  &kp TILDE  &kp PERCENT    &kp STAR          &kp MINUS       &kp PLUS     &trans  &kp AMPS  &kp PIPE              &kp SEMI  &kp COLON     &kp BSLH  &trans
-&trans  &trans     &trans         &trans            &trans          &trans       &trans  &trans    &trans                &trans    &trans        &trans
+&trans  &trans     &trans       &trans    &trans         &trans              &trans  &trans            &trans         &trans         &trans                 &trans  &trans
+&trans  &trans     &kp AT       &kp HASH  &kp LESS_THAN  &kp GREATER_THAN    &trans  &mt CARET DOLLAR  &mt RPAR LPAR  &mt RBRC LBRC  &mt RBKT LEFT_BRACKET  &trans  &trans
+&trans  &trans     &trans       &trans    &trans         &trans              &trans  &trans            &trans         &trans         &trans                 &trans  &trans
+&trans  &kp TILDE  &kp PERCENT  &kp STAR  &kp MINUS      &kp PLUS            &trans  &kp AMPS          &kp PIPE       &trans         &trans                 &trans  &trans
+&trans  &trans     &trans       &trans    &trans         &trans              &trans  &quote            &kp EQUAL      &trans         &trans                 &trans
             >;
         };
 
