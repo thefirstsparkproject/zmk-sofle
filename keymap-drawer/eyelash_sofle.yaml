@@ -112,8 +112,8 @@ layers:
   - {t: '-', s: _}
   - +
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&'
-  - '|'
+  - {t: '|', h: '&'}
+  - '&quote'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -125,8 +125,8 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&quote'
   - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -445,7 +445,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -453,7 +452,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [14, 28, 40]
@@ -464,7 +464,21 @@ combos:
   k: {t: accent, h: '$$mdi:gesture-tap-hold$$'}
 - p: [21, 22]
   k: _
-- p: [17, 18]
+- p: [41, 34]
   k: '&key_repeat'
-- p: [54, 62]
-  k: {t: '6', h: '6'}
+- p: [30, 29]
+  k: $$mdi:keyboard-space$$
+- p: [29, 28]
+  k: $$mdi:keyboard-tab$$
+- p: [30, 29, 28]
+  k: $$mdi:keyboard-esc$$
+- p: [34, 35]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [35, 36]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [22, 23]
+  k: {t: 'Ctl+$$mdi:backspace$$', type: backspace}
+- p: [34, 35, 36]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [48, 49]
+  k: $$mdi:backspace-reverse-outline$$
