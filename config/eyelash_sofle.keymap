@@ -177,6 +177,14 @@
         tapping-term-ms = <250>;
     };
 
+    caps_constant: caps_constant {
+        compatible = "zmk,behavior-caps-word";
+        label = "CAPS_CONSTANT";
+        #binding-cells = <0>;
+        continue-list = <Q W E R T Y U I O P A S D F G H J K L Z X C V B N M UNDERSCORE NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0>;
+        mods = <(MOD_LSFT)>;
+    };
+
     behaviors {
     };
 
@@ -191,6 +199,11 @@
         combo_shortcut {
             bindings = <&sl 6>;
             key-positions = <34 35>;
+        };
+
+        combo_accent {
+            bindings = <&sl 4>;
+            key-positions = <57 59>;
         };
     };
 
@@ -266,6 +279,13 @@
             bindings = <&kp CAPSLOCK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "GRAVE_ACCENT";
         };
+
+        macro_tap_into_sl: macro_tap_into_sl {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &sl MACRO_PLACEHOLDER>;
+            label = "MACRO_TAP_INTO_SL";
+        };
     };
 
     keymap {
@@ -273,37 +293,37 @@
 
         base_layer {
             bindings = <
-&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                        &trans
-&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                         &trans
-&trans      &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &trans
-&trans      &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp DOT               &kp FSLH                      &trans
-&kp C_MUTE  &trans                &trans                &lt 3 ESCAPE           &lt 1 ENTER            &kp SPACE    &mkp MB1         &kp BACKSPACE  &lt 2 DELETE            &kp TAB                &sl 4                 &mo 5
+&trans          &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                  &trans
+&trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                   &trans
+&caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN DQT  &trans
+&trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp DOT               &kp FSLH                &trans
+&kp C_MUTE      &trans                &trans                &lt 3 ESCAPE           &lt 1 ENTER            &kp SPACE    &mkp MB1         &kp BACKSPACE  &lt 2 DELETE            &kp TAB                &trans                &mo 5
             >;
 
             display-name = "base_layer";
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
-        numbers_symbols_fns {
+        numbers_and_fns {
             bindings = <
 &trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
 &trans   &kp F1                 &kp F2                 &kp F3                  &kp F4                        &kp F5    &trans  &kp F6  &kp F7                  &kp F8                  &kp F9                 &kp F10                &trans
 &kp F11  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT NUMBER_4  &kp N5    &trans  &kp N6  &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &kp F12
-&trans   &trans                 &trans                 &kp MINUS               &kp EQUAL                     &trans    &trans  &trans  &kp GRAVE               &kp APOS                &kp LBKT               &kp RBKT               &trans
+&trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans                 &trans
 &trans   &trans                 &trans                 &trans                  &trans                        &trans    &trans  &trans  &trans                  &trans                  &trans                 &trans
             >;
 
-            label = "numbers_symbols_fns";
+            label = "numbers_and_fns";
         };
 
-        numbers_symbols_fns_2 {
-            label = "numbers_symbols_fns_2";
+        symbols {
+            label = "symbols";
             bindings = <
-&trans   &trans                          &trans                      &trans                    &trans                    &trans         &trans  &trans     &trans                         &trans                        &trans                               &trans                                &trans
-&trans   &kp F1                          &kp F2                      &kp F3                    &kp F4                    &kp F5         &trans  &kp F6     &kp F7                         &kp F8                        &kp F9                               &kp F10                               &trans
-&kp F11  &home_row_mod LGUI EXCLAMATION  &home_row_mod LALT AT_SIGN  &home_row_mod LCTRL HASH  &home_row_mod LSHFT DLLR  &kp PERCENT    &trans  &kp CARET  &home_row_mod RSHFT AMPERSAND  &home_row_mod RCTRL ASTERISK  &home_row_mod RALT LEFT_PARENTHESIS  &home_row_mod RGUI RIGHT_PARENTHESIS  &kp F12
-&trans   &trans                          &trans                      &kp UNDERSCORE            &kp PLUS                  &trans         &trans  &trans     &kp TILDE                      &kp DOUBLE_QUOTES             &kp LEFT_BRACE                       &kp RIGHT_BRACE                       &trans
-&trans   &trans                          &trans                      &trans                    &trans                    &trans         &trans  &trans     &trans                         &trans                        &trans                               &trans
+&trans  &trans     &trans         &trans            &trans          &trans       &trans  &trans    &trans                &trans    &trans        &trans    &trans
+&trans  &trans     &kp AT         &kp HASH          &kp DOLLAR      &kp CARET    &trans  &kp LBKT  &kp LEFT_PARENTHESIS  &kp LBRC  &kp QUESTION  &trans    &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp UNDERSCORE  &kp EQUAL    &trans  &kp RBKT  &kp RPAR              &kp RBRC  &kp EXCL      &kp SQT   &trans
+&trans  &kp TILDE  &kp PERCENT    &kp STAR          &kp MINUS       &kp PLUS     &trans  &kp AMPS  &kp PIPE              &kp SEMI  &kp COLON     &kp BSLH  &trans
+&trans  &trans     &trans         &trans            &trans          &trans       &trans  &trans    &trans                &trans    &trans        &trans
             >;
         };
 
@@ -321,11 +341,11 @@
 
         accent {
             bindings = <
-&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &accent COMMA  &accent COMMA  &accent CARET  &accent SQT  &accent GRAVE    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &trans         &trans         &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans             &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans             &trans
+&trans  &accent DOUBLE_QUOTES  &accent COMMA  &accent CARET  &accent SQT  &accent GRAVE    &trans  &kp GRAVE  &kp APOS  &kp CARET  &kp COMMA  &kp DOUBLE_QUOTES  &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans             &trans
+&trans  &trans                 &trans         &trans         &trans       &trans           &trans  &trans     &trans    &trans     &trans     &trans
             >;
 
             label = "accent";
