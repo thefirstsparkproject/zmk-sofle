@@ -307,11 +307,11 @@
         numsym {
             label = "numsym";
             bindings = <
-&none  &none                  &none                  &none                   &none                   &none               &none  &none             &none                   &none                   &none                  &none                  &none
-&none  &none                  &kp AT                 &kp HASH                &kp LESS_THAN           &kp GREATER_THAN    &none  &mt CARET DOLLAR  &mt RPAR LPAR           &mt RBRC LBRC           &mt RBKT LEFT_BRACKET  &none                  &none
-&none  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT N4  &kp N5              &none  &kp N6            &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &none
-&none  &kp TILDE              &kp PERCENT            &kp STAR                &kp MINUS               &kp PLUS            &none  &kp AMPS          &kp PIPE                &none                   &none                  &none                  &none
-&none  &none                  &none                  &none                   &none                   &none               &none  &quote            &kp EQUAL               &none                   &none                  &none
+&trans  &trans                 &trans                 &trans                  &trans                  &trans              &trans  &trans            &trans                  &trans                  &trans                 &trans                 &trans
+&trans  &trans                 &kp AT                 &kp HASH                &kp LESS_THAN           &kp GREATER_THAN    &trans  &mt CARET DOLLAR  &mt RPAR LPAR           &mt RBRC LBRC           &mt RBKT LEFT_BRACKET  &trans                 &trans
+&trans  &home_row_mod LGUI N1  &home_row_mod LALT N2  &home_row_mod LCTRL N3  &home_row_mod LSHFT N4  &kp N5              &trans  &kp N6            &home_row_mod RSHFT N7  &home_row_mod RCTRL N8  &home_row_mod RALT N9  &home_row_mod RGUI N0  &trans
+&trans  &kp TILDE              &kp PERCENT            &kp STAR                &kp MINUS               &kp PLUS            &trans  &kp AMPS          &kp PIPE                &trans                  &trans                 &trans                 &trans
+&trans  &trans                 &trans                 &trans                  &trans                  &trans              &trans  &quote            &kp EQUAL               &trans                  &trans                 &trans
             >;
         };
 
