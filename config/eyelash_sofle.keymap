@@ -255,11 +255,6 @@
             key-positions = <22 23>;
         };
 
-        combo_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <34 35 36>;
-        };
-
         combo_delete {
             bindings = <&kp DEL>;
             key-positions = <48 49>;
