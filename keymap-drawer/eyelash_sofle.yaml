@@ -399,3 +399,5 @@ combos:
   k: {t: accent, h: '$$mdi:gesture-tap-hold$$'}
 - p: [21, 22]
   k: _
+- p: [17, 18]
+  k: '&key_repeat'
