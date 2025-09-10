@@ -220,26 +220,6 @@
             key-positions = <17 16>;
         };
 
-        combo_tab {
-            bindings = <&kp TAB>;
-            key-positions = <29 30>;
-        };
-
-        combo_escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <28 29>;
-        };
-
-        combo_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <35 34>;
-        };
-
-        combo_delete {
-            bindings = <&kp DEL>;
-            key-positions = <36 35>;
-        };
-
         combo_mouse_mode {
             bindings = <&to 2>;
             key-positions = <47 48>;
@@ -248,6 +228,11 @@
         combo_keyboard_mode {
             bindings = <&to 3>;
             key-positions = <48 49>;
+        };
+
+        combo_constant {
+            bindings = <&caps_constant>;
+            key-positions = <22 23>;
         };
     };
 
