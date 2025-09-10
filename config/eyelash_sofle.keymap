@@ -341,11 +341,11 @@
         numsym {
             label = "numsym";
             bindings = <
-&trans  &trans     &trans    &trans         &trans            &trans             &trans     &trans     &trans     &trans    &trans    &trans        &trans
-&trans  &kp TILDE  &kp AT    &kp HASH       &kp DOLLAR        &kp PERCENT        &kp GRAVE  &kp CARET  &kp GRAVE  &kp LBRC  &kp RBRC  &trans        &trans
-&trans  &kp PIPE   &kp AMPS  &kp LESS_THAN  &kp GREATER_THAN  &kp EXCLAMATION    &trans     &kp EQUAL  &kp UNDER  &kp LPAR  &kp RPAR  &kp COLON     &trans
-&trans  &kp BSLH   &kp FSLH  &kp STAR       &kp MINUS         &kp PLUS           &trans     &kp SQT    &kp DQT    &kp LBKT  &kp RBKT  &kp QUESTION  &trans
-&trans  &trans     &trans    &trans         &trans            &trans             &trans     &trans     &trans     &trans    &trans    &trans
+&trans  &trans     &trans    &trans         &trans            &trans             &trans     &trans     &trans    &trans    &trans     &trans        &trans
+&trans  &kp TILDE  &kp AT    &kp HASH       &kp DOLLAR        &kp PERCENT        &kp GRAVE  &kp CARET  &kp LBRC  &kp RBRC  &kp SQT    &kp GRAVE     &trans
+&trans  &kp PIPE   &kp AMPS  &kp LESS_THAN  &kp GREATER_THAN  &kp EXCLAMATION    &trans     &kp EQUAL  &kp LPAR  &kp RPAR  &kp DQT    &kp COLON     &trans
+&trans  &kp BSLH   &kp FSLH  &kp STAR       &kp MINUS         &kp PLUS           &trans     &kp GRAVE  &kp LBKT  &kp RBKT  &kp UNDER  &kp QUESTION  &trans
+&trans  &trans     &trans    &trans         &trans            &trans             &trans     &trans     &trans    &trans    &trans     &trans
             >;
         };
 
