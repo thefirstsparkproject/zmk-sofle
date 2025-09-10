@@ -207,7 +207,7 @@
 
         combo_shortcut {
             bindings = <&sl 6>;
-            key-positions = <43 42>;
+            key-positions = <41 42>;
         };
 
         combo_accent {
@@ -217,46 +217,51 @@
 
         combo_underscore {
             bindings = <&kp UNDER>;
-            key-positions = <21 22>;
+            key-positions = <21 34>;
         };
 
         combo_repeat {
             bindings = <&key_repeat>;
-            key-positions = <41 42>;
+            key-positions = <14 27>;
         };
 
         combo_space {
             bindings = <&kp SPACE>;
-            key-positions = <30 29>;
+            key-positions = <17 30>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
-            key-positions = <29 28>;
+            key-positions = <16 29>;
         };
 
         combo_escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <15 16>;
+            key-positions = <15 28>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
-            key-positions = <34 35>;
+            key-positions = <22 35>;
         };
 
         combo_backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <35 36>;
-        };
-
-        combo_ctrl_backspace {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <22 23>;
+            key-positions = <23 36>;
         };
 
         combo_delete {
             bindings = <&kp DEL>;
+            key-positions = <24 37>;
+        };
+
+        combo_mouse_mode {
+            bindings = <&to 2>;
+            key-positions = <47 48>;
+        };
+
+        combo_keyboard_mode {
+            bindings = <&to 3>;
             key-positions = <48 49>;
         };
     };
@@ -351,7 +356,7 @@
 &trans          &kp Q                 &kp W                 &kp E                  &kp R                  &kp T            &mmv MOVE_DOWN   &kp Y   &kp U                   &kp I                  &kp O                 &kp P                   &trans
 &caps_constant  &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G            &mmv MOVE_LEFT   &kp H   &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN TAB  &trans
 &trans          &kp Z                 &kp X                 &kp C                  &kp V                  &kp B            &mmv MOVE_RIGHT  &kp N   &kp M                   &comma                 &period               &mt BACKSLASH SLASH     &trans
-&kp C_MUTE      &trans                &key_repeat           &mo 3                  &mo 2                  &sl_to_mo 1 1    &mkp MB1         &trans  &trans                  &trans                 &trans                &mo 5
+&kp C_MUTE      &trans                &trans                &to 0                  &trans                 &sl_to_mo 1 1    &mkp MB1         &trans  &trans                  &trans                 &trans                &mo 5
             >;
 
             display-name = "base_layer";
