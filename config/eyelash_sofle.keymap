@@ -308,13 +308,6 @@
             bindings = <&kp CAPSLOCK &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "GRAVE_ACCENT";
         };
-
-        macro_accent2: macro_accent2 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&none &macro_param_1to1 &accent MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MACRO_ACCENT2";
-        };
     };
 
     keymap {
@@ -322,10 +315,10 @@
 
         base_layer {
             bindings = <
-&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                    &trans
-&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                     &trans
-&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN UNDER  &kp ENTER
-&kp ESCAPE  &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &mt BACKSLASH SLASH       &kp DELETE
+&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                        &trans
+&trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                         &trans
+&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
+&kp ESCAPE  &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &sl 5                         &kp DELETE
 &kp C_MUTE  &trans                &trans                &to 0                  &sl_to_mo 2 2          &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
             >;
 
@@ -348,11 +341,11 @@
         numsym {
             label = "numsym";
             bindings = <
-&trans  &trans        &trans        &trans      &trans        &trans           &trans     &trans         &trans         &trans        &trans        &trans         &trans
-&trans  &trans        &kp AT        &kp HASH    &kp LS(DLLR)  &kp LS(PRCNT)    &kp GRAVE  &kp LS(TILDE)  &kp LS(CARET)  &kp LS(LBRC)  &kp LS(RBRC)  &trans         &trans
-&trans  &kp LS(PIPE)  &kp LS(AMPS)  &kp LS(LT)  &kp LS(GT)    &kp LS(EXCL)     &trans     &kp BSLH       &kp EQUAL      &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(COLON)  &trans
-&trans  &trans        &kp FSLH      &kp STAR    &kp MINUS     &kp PLUS         &trans     &kp SQT        &kp LS(DQT)    &kp LBKT      &kp RBKT      &kp LS(QMARK)  &trans
-&trans  &trans        &trans        &trans      &trans        &trans           &trans     &trans         &trans         &trans        &trans        &trans
+&trans  &trans     &trans    &trans         &trans            &trans             &trans     &trans     &trans     &trans    &trans    &trans        &trans
+&trans  &kp TILDE  &kp AT    &kp HASH       &kp DOLLAR        &kp PERCENT        &kp GRAVE  &kp CARET  &kp GRAVE  &kp LBRC  &kp RBRC  &trans        &trans
+&trans  &kp PIPE   &kp AMPS  &kp LESS_THAN  &kp GREATER_THAN  &kp EXCLAMATION    &trans     &kp EQUAL  &kp UNDER  &kp LPAR  &kp RPAR  &kp COLON     &trans
+&trans  &kp BSLH   &kp FSLH  &kp STAR       &kp MINUS         &kp PLUS           &trans     &kp SQT    &kp DQT    &kp LBKT  &kp RBKT  &kp QUESTION  &trans
+&trans  &trans     &trans    &trans         &trans            &trans             &trans     &trans     &trans     &trans    &trans    &trans
             >;
         };
 
