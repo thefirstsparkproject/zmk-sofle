@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&caps_constant'
+  - $$mdi:keyboard-tab$$
   - {t: A, h: LWIN}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -39,8 +39,8 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: _, h: LWIN}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-esc$$
   - Z
   - X
   - C
@@ -49,10 +49,10 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&comma'
-  - '&period'
+  - {t: ',', h: ;, s: <}
+  - {t: ., h: ':'}
   - {t: /, h: \, s: '?'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -113,10 +113,10 @@ layers:
   - +
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '|', h: '&'}
-  - '&quote'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '''', h: '`', s: '"'}
+  - '"'
+  - '!'
+  - '?'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
