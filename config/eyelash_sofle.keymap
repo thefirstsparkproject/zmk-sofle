@@ -207,7 +207,7 @@
 
         combo_shortcut {
             bindings = <&sl 6>;
-            key-positions = <>;
+            key-positions = <41 42>;
         };
 
         combo_accent {
