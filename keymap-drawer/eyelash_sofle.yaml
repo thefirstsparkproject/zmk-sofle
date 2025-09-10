@@ -464,15 +464,9 @@ combos:
   k: {t: accent, h: '$$mdi:gesture-tap-hold$$'}
 - p: [17, 16]
   k: '&key_repeat'
-- p: [29, 30]
-  k: $$mdi:keyboard-tab$$
-- p: [28, 29]
-  k: $$mdi:keyboard-esc$$
-- p: [35, 34]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
-- p: [36, 35]
-  k: $$mdi:backspace-reverse-outline$$
 - p: [47, 48]
   k: {t: mouse, h: toggle}
 - p: [48, 49]
   k: {t: keyboard, h: toggle}
+- p: [22, 23]
+  k: '&caps_constant'

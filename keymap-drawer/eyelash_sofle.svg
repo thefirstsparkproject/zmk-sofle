@@ -667,32 +667,20 @@ rect.held, rect.combo.held {
 <text x="224" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;key_repe…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="215" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="159" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
-</g>
-<g class="combo enter combopos-6">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="691" y="134" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
-<g class="combo combopos-7">
-<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="747" y="134" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
-</g>
-<g class="combo combopos-8">
 <rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#mouse">
 <text x="700" y="200" class="combo tap layer-activator">mouse</text>
 </a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <a href="#keyboard">
 <text x="756" y="200" class="combo tap layer-activator"><tspan style="font-size: 75%">keyboard</tspan></text>
 </a><text x="756" y="210" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -1070,32 +1058,20 @@ rect.held, rect.combo.held {
 <text x="224" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;key_repe…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="215" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="159" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
-</g>
-<g class="combo enter combopos-6">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="691" y="134" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
-<g class="combo combopos-7">
-<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="747" y="134" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
-</g>
-<g class="combo combopos-8">
 <rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#mouse">
 <text x="700" y="200" class="combo tap layer-activator">mouse</text>
 </a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <a href="#keyboard">
 <text x="756" y="200" class="combo tap layer-activator"><tspan style="font-size: 75%">keyboard</tspan></text>
 </a><text x="756" y="210" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -1450,32 +1426,20 @@ rect.held, rect.combo.held {
 <text x="224" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;key_repe…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="215" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="159" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
-</g>
-<g class="combo enter combopos-6">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="691" y="134" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
-<g class="combo combopos-7">
-<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="747" y="134" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
-</g>
-<g class="combo combopos-8">
 <rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#mouse">
 <text x="700" y="200" class="combo tap layer-activator">mouse</text>
 </a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <a href="#keyboard">
 <text x="756" y="200" class="combo tap layer-activator"><tspan style="font-size: 75%">keyboard</tspan></text>
 </a><text x="756" y="210" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -1826,32 +1790,20 @@ rect.held, rect.combo.held {
 <text x="224" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;key_repe…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="215" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="159" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
-</g>
-<g class="combo enter combopos-6">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="691" y="134" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
-<g class="combo combopos-7">
-<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="747" y="134" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
-</g>
-<g class="combo combopos-8">
 <rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#mouse">
 <text x="700" y="200" class="combo tap layer-activator">mouse</text>
 </a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <a href="#keyboard">
 <text x="756" y="200" class="combo tap layer-activator"><tspan style="font-size: 75%">keyboard</tspan></text>
 </a><text x="756" y="210" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -2220,32 +2172,20 @@ rect.held, rect.combo.held {
 <text x="224" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;key_repe…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="215" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="159" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
-</g>
-<g class="combo enter combopos-6">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="691" y="134" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
-<g class="combo combopos-7">
-<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="747" y="134" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
-</g>
-<g class="combo combopos-8">
 <rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#mouse">
 <text x="700" y="200" class="combo tap layer-activator">mouse</text>
 </a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <a href="#keyboard">
 <text x="756" y="200" class="combo tap layer-activator"><tspan style="font-size: 75%">keyboard</tspan></text>
 </a><text x="756" y="210" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -2602,32 +2542,20 @@ rect.held, rect.combo.held {
 <text x="224" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;key_repe…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="215" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="159" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
-</g>
-<g class="combo enter combopos-6">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="691" y="134" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
-<g class="combo combopos-7">
-<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="747" y="134" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
-</g>
-<g class="combo combopos-8">
 <rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#mouse">
 <text x="700" y="200" class="combo tap layer-activator">mouse</text>
 </a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <a href="#keyboard">
 <text x="756" y="200" class="combo tap layer-activator"><tspan style="font-size: 75%">keyboard</tspan></text>
 </a><text x="756" y="210" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -3038,32 +2966,20 @@ rect.held, rect.combo.held {
 <text x="224" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;key_repe…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="215" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="154" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="159" y="134" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
-</g>
-<g class="combo enter combopos-6">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="691" y="134" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
-<g class="combo combopos-7">
-<rect rx="6" ry="6" x="742" y="130" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="747" y="134" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
-</g>
-<g class="combo combopos-8">
 <rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#mouse">
 <text x="700" y="200" class="combo tap layer-activator">mouse</text>
 </a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="742" y="186" width="28" height="26" class="combo"/>
 <a href="#keyboard">
 <text x="756" y="200" class="combo tap layer-activator"><tspan style="font-size: 75%">keyboard</tspan></text>
 </a><text x="756" y="210" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
