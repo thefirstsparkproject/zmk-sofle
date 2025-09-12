@@ -317,8 +317,8 @@
             bindings = <
 &trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                        &trans
 &trans      &kp Q                 &kp W                 &kp E                  &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &kp I                  &kp O                 &kp P                         &trans
-&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
-&kp ESCAPE  &kp Z                 &kp X                 &kp C                  &kp V                  &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &kp SLASH                     &kp DELETE
+&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &lt 2 G      &mmv MOVE_LEFT   &lt 2 H        &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
+&kp ESCAPE  &kp Z                 &kp X                 &lt 4 C                &lt 3 V                &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &kp SLASH                     &kp DELETE
 &kp C_MUTE  &trans                &trans                &to 0                  &sl_to_mo 2 2          &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
             >;
 
@@ -341,11 +341,11 @@
         symbols {
             label = "symbols";
             bindings = <
-&trans  &trans     &trans         &trans    &trans      &trans             &trans  &trans     &trans    &trans    &trans    &trans        &trans
-&trans  &trans     &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT        &trans  &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT  &trans        &trans
-&trans  &kp TILDE  &kp PIPE       &kp AMPS  &kp UNDER   &kp EXCLAMATION    &trans  &kp EQUAL  &kp LPAR  &kp LBRC  &kp LBKT  &kp COLON     &trans
-&trans  &kp GRAVE  &kp BACKSLASH  &kp STAR  &kp MINUS   &kp PLUS           &trans  &kp SQT    &kp DQT   &kp LT    &kp GT    &kp QUESTION  &trans
-&trans  &trans     &trans         &trans    &trans      &trans             &trans  &trans     &trans    &trans    &trans    &trans
+&trans  &trans  &trans         &trans    &trans      &trans            &trans  &trans     &trans    &trans    &trans    &trans        &trans
+&trans  &trans  &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT       &trans  &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT  &trans        &trans
+&trans  &trans  &kp TILDE      &kp SQT   &kp DQT     &kp GRAVE         &trans  &kp EXCL   &kp LPAR  &kp LBRC  &kp LBKT  &kp COLON     &trans
+&trans  &trans  &kp BACKSLASH  &kp STAR  &kp MINUS   &kp PLUS          &trans  &kp AMPS   &kp PIPE  &kp LT    &kp GT    &kp QUESTION  &trans
+&trans  &trans  &trans         &trans    &trans      &kp UNDERSCORE    &trans  &kp EQUAL  &trans    &trans    &trans    &trans
             >;
         };
 
