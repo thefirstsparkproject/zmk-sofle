@@ -342,8 +342,8 @@
             label = "symbols";
             bindings = <
 &trans  &trans     &trans         &trans    &trans      &trans             &trans  &trans     &trans    &trans    &trans    &trans        &trans
-&trans  &trans     &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT        &trans  &kp CARET  &kp LPAR  &kp LBRC  &kp LBKT  &trans        &trans
-&trans  &kp TILDE  &kp PIPE       &kp AMPS  &kp UNDER   &kp EXCLAMATION    &trans  &kp EQUAL  &kp RPAR  &kp RBRC  &kp RBKT  &kp COLON     &trans
+&trans  &trans     &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT        &trans  &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT  &trans        &trans
+&trans  &kp TILDE  &kp PIPE       &kp AMPS  &kp UNDER   &kp EXCLAMATION    &trans  &kp EQUAL  &kp LPAR  &kp LBRC  &kp LBKT  &kp COLON     &trans
 &trans  &kp GRAVE  &kp BACKSLASH  &kp STAR  &kp MINUS   &kp PLUS           &trans  &kp SQT    &kp DQT   &kp LT    &kp GT    &kp QUESTION  &trans
 &trans  &trans     &trans         &trans    &trans      &trans             &trans  &trans     &trans    &trans    &trans    &trans
             >;
