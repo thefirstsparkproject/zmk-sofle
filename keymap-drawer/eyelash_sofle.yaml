@@ -32,9 +32,9 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-  - G
+  - {t: G, h: symbols}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - H
+  - {t: H, h: symbols}
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
@@ -43,8 +43,8 @@ layers:
   - $$mdi:keyboard-esc$$
   - Z
   - X
-  - C
-  - V
+  - {t: C, h: keyboard}
+  - {t: V, h: mouse}
   - B
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - N
@@ -158,27 +158,27 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '~'
-  - '|'
-  - '&'
-  - _
-  - '!'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '=', s: +}
+  - '~'
+  - {t: '''', s: '"'}
+  - '"'
+  - {t: '`', s: '~', type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '!', type: held alternate}
   - (
   - '{'
   - {t: '[', s: '{'}
   - ':'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
   - '*'
   - {t: '-', s: _}
   - +
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '''', s: '"'}
-  - '"'
+  - '&'
+  - '|'
   - <
   - '>'
   - '?'
@@ -187,10 +187,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {type: held alternate}
+  - _
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -239,7 +239,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&nav_zoom'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -303,7 +303,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
