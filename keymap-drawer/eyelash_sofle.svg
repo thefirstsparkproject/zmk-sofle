@@ -1559,8 +1559,9 @@ rect.held, rect.combo.held {
 <g transform="translate(252, 91)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">9</text>
-<text x="0" y="-24" class="key shifted">(</text>
+<a href="#x_x">
+<text x="0" y="-4" class="key tap layer-activator">9</text>
+</a><text x="0" y="-24" class="key shifted">(</text>
 </g>
 <g transform="translate(308, 91)" class="key trans keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2643,10 +2644,8 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-8">
 <rect rx="6" ry="6" x="210" y="130" width="28" height="26" class="combo"/>
-<a href="#Mod-Layer">
-<text x="224" y="144" class="combo tap layer-activator">
-<tspan x="224" dy="-0.6em">Mod</tspan><tspan x="224" dy="1.2em">Layer</tspan>
-</text>
+<a href="#x_x">
+<text x="224" y="144" class="combo tap layer-activator">9</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 </g>
@@ -3609,8 +3608,9 @@ rect.held, rect.combo.held {
 <g transform="translate(784, 147)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">9</text>
-<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:apple-keyboard-option"/>
+<a href="#x_x">
+<text x="0" y="-4" class="key tap layer-activator">9</text>
+</a><use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:apple-keyboard-option"/>
 <text x="0" y="-24" class="key shifted">(</text>
 </g>
 <g transform="translate(840, 168)" class="key keypos-37">
@@ -3797,8 +3797,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 3494)" class="layer-Mod Layer">
-<text x="0" y="28" class="label" id="Mod-Layer">Mod Layer:</text>
+<g transform="translate(40, 3494)" class="layer-9">
+<text x="0" y="28" class="label" id="x_x">9:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>

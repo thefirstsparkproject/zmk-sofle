@@ -585,7 +585,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Mod Layer:
+  '9':
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -692,5 +692,5 @@ combos:
 - p: [4, 3, 2]
   k: {t: 'Sft+Ctl+$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
 - p: [30, 29]
-  k: {t: Mod Layer, h: '$$mdi:gesture-tap-hold$$'}
+  k: {t: '9', h: '$$mdi:gesture-tap-hold$$'}
   l: [fold]
