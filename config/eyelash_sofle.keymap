@@ -194,6 +194,16 @@
         tapping-term-ms = <250>;
     };
 
+    kp_or_sk: kp_or_sk {
+        compatible = "zmk,behavior-hold-tap";
+        label = "KP_OR_SK";
+        bindings = <&kp>, <&sk>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <300>;
+        flavor = "balanced";
+    };
+
     behaviors {
     };
 
@@ -332,11 +342,11 @@
 
         base_layer {
             bindings = <
-&trans      &trans                &trans                &trans                 &trans                 &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                        &trans
-&trans      &kp Q                 &kp W                 &lt 2 E                &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &lt 2 I                &kp O                 &kp P                         &trans
-&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
-&kp ESCAPE  &kp Z                 &kp X                 &lt 4 C                &lt 3 V                &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &kp SLASH                     &kp DELETE
-&kp C_MUTE  &trans                &trans                &trans                 &sl_to_mo 2 2          &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
+&to 0       &kp_or_sk LS(LCTRL) LS(LCTRL)  &kp_or_sk LEFT_ALT LEFT_ALT  &kp_or_sk LCTRL LCTRL  &kp_or_sk LEFT_SHIFT LEFT_SHIFT  &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                        &trans
+&trans      &kp Q                          &kp W                        &lt 2 E                &kp R                            &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &lt 2 I                &kp O                 &kp P                         &trans
+&kp TAB     &home_row_mod LWIN A           &home_row_mod LALT S         &home_row_mod LCTRL D  &home_row_mod LSHFT F            &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
+&kp ESCAPE  &kp Z                          &kp X                        &lt 4 C                &lt 3 V                          &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &kp SLASH                     &kp DELETE
+&kp C_MUTE  &trans                         &trans                       &trans                 &mo 8                            &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
             >;
 
             display-name = "base_layer";
@@ -424,6 +434,18 @@
             >;
 
             label = "shortcut";
+        };
+
+        fold {
+            bindings = <
+&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ENTER  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSPC   &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Fold";
         };
     };
 };
