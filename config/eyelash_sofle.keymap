@@ -474,7 +474,7 @@
             >;
         };
 
-        mod_layer {
+        layer_9 {
             bindings = <
 &trans  &trans        &trans            &trans            &trans                &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &sk LS(LEFT_ALT)  &sk LC(LEFT_ALT)  &sk LC(LS(LEFT_ALT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -482,8 +482,6 @@
 &trans  &trans        &trans            &trans            &sk LS(LCTRL)         &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans            &trans            &trans                &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            label = "Mod Layer";
         };
     };
 };
