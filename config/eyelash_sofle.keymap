@@ -215,11 +215,6 @@
             key-positions = <14 28 40>;
         };
 
-        combo_shortcut {
-            bindings = <&sl 7>;
-            key-positions = <41 42>;
-        };
-
         combo_accent {
             bindings = <&sl 5>;
             key-positions = <57 59>;
@@ -250,9 +245,54 @@
             key-positions = <21 22>;
         };
 
-        combo_to0 {
+        reset {
             bindings = <&to 0>;
-            key-positions = <30 29 28>;
+            key-positions = <>;
+        };
+
+        shift_ctrl {
+            bindings = <&sk LS(LCTRL)>;
+            key-positions = <4 3>;
+        };
+
+        shift_alt {
+            bindings = <&sk LS(LEFT_ALT)>;
+            key-positions = <4 2>;
+        };
+
+        ctrl_alt {
+            bindings = <&sk LC(LEFT_ALT)>;
+            key-positions = <3 2>;
+        };
+
+        shift_ctrl_alt {
+            bindings = <&sk LS(LC(LALT))>;
+            key-positions = <2 3 4>;
+        };
+
+        shift_ctrl_low {
+            bindings = <&sk LS(LCTRL)>;
+            key-positions = <55 54>;
+        };
+
+        shift_alt_low {
+            bindings = <&sk LS(LEFT_ALT)>;
+            key-positions = <53 55>;
+        };
+
+        ctrl_alt_low {
+            bindings = <&sk LC(LEFT_ALT)>;
+            key-positions = <53 54>;
+        };
+
+        shift_ctrl_alt_low {
+            bindings = <&sk LS(LC(LALT))>;
+            key-positions = <53 54 55>;
+        };
+
+        goto_hub {
+            bindings = <&sl 12>;
+            key-positions = <30 29>;
         };
     };
 
@@ -329,10 +369,10 @@
             label = "GRAVE_ACCENT";
         };
 
-        macro_mental_math: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp TAB &kp ENTER>;
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &sk MACRO_PLACEHOLDER &sl 8>;
             label = "NEW_MACRO";
         };
     };
@@ -342,11 +382,11 @@
 
         base_layer {
             bindings = <
-&to 0       &kp_or_sk LS(LCTRL) LS(LCTRL)  &kp_or_sk LEFT_ALT LEFT_ALT  &kp_or_sk LCTRL LCTRL  &kp_or_sk LEFT_SHIFT LEFT_SHIFT  &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                        &trans
-&trans      &kp Q                          &kp W                        &lt 2 E                &kp R                            &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &lt 2 I                &kp O                 &kp P                         &trans
-&kp TAB     &home_row_mod LWIN A           &home_row_mod LALT S         &home_row_mod LCTRL D  &home_row_mod LSHFT F            &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
-&kp ESCAPE  &kp Z                          &kp X                        &lt 4 C                &lt 3 V                          &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &kp SLASH                     &kp DELETE
-&kp C_MUTE  &trans                         &trans                       &trans                 &mo 8                            &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
+&to 0       &trans                &kp_or_sk LEFT_ALT LEFT_ALT  &kp_or_sk LCTRL LCTRL  &kp_or_sk LEFT_SHIFT LEFT_SHIFT  &trans       &mmv MOVE_UP     &trans         &trans                  &trans                 &trans                &trans                        &trans
+&trans      &kp Q                 &kp W                        &lt 2 E                &kp R                            &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &lt 2 I                &kp O                 &kp P                         &trans
+&kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S         &home_row_mod LCTRL D  &home_row_mod LSHFT F            &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
+&kp ESCAPE  &kp Z                 &kp X                        &lt 4 C                &lt 3 V                          &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &kp SLASH                     &kp DELETE
+&kp C_MUTE  &kp LALT              &kp LCTRL                    &kp LSHFT              &sl_or_mo 8 8                    &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
             >;
 
             display-name = "base_layer";
@@ -436,16 +476,64 @@
             label = "shortcut";
         };
 
-        fold {
+        right_fold {
             bindings = <
-&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp ENTER  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSPC   &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ENTER   &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp DELETE  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans    &trans   &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "Fold";
+            label = "Right Fold";
+        };
+
+        left_numbers {
+            bindings = <
+&trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &kp N7  &kp N8  &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp DOT  &kp N4  &kp N5  &kp N6  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0   &kp N1  &kp N2  &kp N3  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Left Numbers";
+        };
+
+        left_numpad {
+            bindings = <
+&trans  &trans     &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp DOT    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Left Numpad";
+        };
+
+        function_keys {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Function Keys";
+        };
+
+        hub {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &to 10  &to 9   &to 8   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &sl 10  &sl 9   &sl 8   &sl 11    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Hub";
         };
     };
 };
