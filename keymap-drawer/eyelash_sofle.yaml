@@ -534,7 +534,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - P
   - O
   - I
@@ -880,3 +880,5 @@ combos:
   k: {t: '$$mdi:star-three-points$$', h: '$$mdi:gesture-tap-hold$$'}
 - p: [30, 29]
   k: {t: Hub, h: '$$mdi:gesture-tap-hold$$'}
+- p: [16, 15]
+  k: '&caps_constant'

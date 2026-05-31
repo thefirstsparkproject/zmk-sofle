@@ -760,6 +760,10 @@ rect.held, rect.combo.held {
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 388)" class="layer-numbers">
@@ -1199,6 +1203,10 @@ rect.held, rect.combo.held {
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 776)" class="layer-symbols">
@@ -1629,6 +1637,10 @@ rect.held, rect.combo.held {
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1165)" class="layer-mouse">
@@ -2054,6 +2066,10 @@ rect.held, rect.combo.held {
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1553)" class="layer-keyboard">
@@ -2474,6 +2490,10 @@ rect.held, rect.combo.held {
 <a href="#Hub">
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -2915,6 +2935,10 @@ rect.held, rect.combo.held {
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 2329)" class="layer-bt">
@@ -3342,6 +3366,10 @@ rect.held, rect.combo.held {
 <a href="#Hub">
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -3825,6 +3853,10 @@ rect.held, rect.combo.held {
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 3106)" class="layer-Right Fold">
@@ -3895,10 +3927,10 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(28, 112)" class="key trans keypos-13">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(28, 112)" class="key backspace keypos-13">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key backspace side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key backspace"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-13" height="18" width="18.0" class="key backspace tap glyph mdi:backspace"/>
 </g>
 <g transform="translate(84, 112)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -4249,6 +4281,10 @@ rect.held, rect.combo.held {
 <a href="#Hub">
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -4682,6 +4718,10 @@ rect.held, rect.combo.held {
 <a href="#Hub">
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -5126,6 +5166,10 @@ rect.held, rect.combo.held {
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 4271)" class="layer-Function Keys">
@@ -5547,6 +5591,10 @@ rect.held, rect.combo.held {
 <a href="#Hub">
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
@@ -5997,6 +6045,10 @@ rect.held, rect.combo.held {
 <a href="#Hub">
 <text x="224" y="144" class="combo tap layer-activator">Hub</text>
 </a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="216" y="140" height="15" width="15.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap"><tspan style="font-size: 60%">&amp;caps_con…</tspan></text>
 </g>
 </g>
 </g>
