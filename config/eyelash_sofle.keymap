@@ -391,7 +391,7 @@
 &trans      &kp Q                 &kp W                 &lt 2 E                &kp R                  &kp T        &mmv MOVE_DOWN   &kp Y          &kp U                   &lt 2 I                &kp O                 &kp P                         &trans
 &kp TAB     &home_row_mod LWIN A  &home_row_mod LALT S  &home_row_mod LCTRL D  &home_row_mod LSHFT F  &kp G        &mmv MOVE_LEFT   &kp H          &home_row_mod RSHIFT J  &home_row_mod RCTRL K  &home_row_mod LALT L  &home_row_mod LWIN SEMICOLON  &kp ENTER
 &kp ESCAPE  &kp Z                 &kp X                 &lt 4 C                &lt 3 V                &kp B        &mmv MOVE_RIGHT  &kp N          &kp M                   &kp COMMA              &kp PERIOD            &kp SLASH                     &kp DELETE
-&kp C_MUTE  &sk LALT              &sk LCTRL             &sk LSHFT              &sl_or_mo 8 8          &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
+&kp C_MUTE  &sl_or_mo 10 10       &sl_to_mo 11 11       &sl_or_mo 9 9          &sl_or_mo 8 8          &kp SPACE    &mkp MB1         &kp BACKSPACE  &sl_to_mo 1 1           &trans                 &trans                &mo 6
             >;
 
             display-name = "base_layer";
@@ -495,11 +495,11 @@
 
         left_numbers {
             bindings = <
-&trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &kp N7  &kp N8  &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp DOT  &kp N4  &kp N5  &kp N6  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N0   &kp N1  &kp N2  &kp N3  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp N7  &kp N8  &kp N9  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PERIOD    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0     &kp N1  &kp N2  &kp N3  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Left Numbers";
@@ -509,7 +509,7 @@
             bindings = <
 &trans  &trans     &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp DOT    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
