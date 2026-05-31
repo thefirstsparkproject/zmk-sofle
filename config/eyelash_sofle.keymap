@@ -247,7 +247,7 @@
 
         reset {
             bindings = <&to 0>;
-            key-positions = <>;
+            key-positions = <28 29>;
         };
 
         shift_ctrl {
